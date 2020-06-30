@@ -1,0 +1,1980 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (979072e1).
+//
+// c:\documents and settings\supervisor\my documents\visual studio 2010\projects\temcontroltest\temcontrolwrapper\debug\stdscript.tli
+//
+// Wrapper implementations for Win32 type library C:\Titan\Scripting\StdScript.dll
+// compiler-generated file created 06/30/20 at 18:34:40 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface UserButtonEvent wrapper method implementations
+//
+
+inline HRESULT UserButtonEvent::Pressed ( ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+//
+// interface Gauge wrapper method implementations
+//
+
+inline HRESULT Gauge::Read ( ) {
+    HRESULT _hr = raw_Read();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t Gauge::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline double Gauge::GetPressure ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Pressure(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum GaugeStatus Gauge::GetStatus ( ) {
+    enum GaugeStatus _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum GaugePressureLevel Gauge::GetPressureLevel ( ) {
+    enum GaugePressureLevel _result;
+    HRESULT _hr = get_PressureLevel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface Gauges wrapper method implementations
+//
+
+inline long Gauges::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline GaugePtr Gauges::GetItem ( const _variant_t & index ) {
+    struct Gauge * _result = 0;
+    HRESULT _hr = get_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return GaugePtr(_result, false);
+}
+
+inline IUnknownPtr Gauges::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface Vacuum wrapper method implementations
+//
+
+inline HRESULT Vacuum::RunBufferCycle ( ) {
+    HRESULT _hr = raw_RunBufferCycle();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum VacuumStatus Vacuum::GetStatus ( ) {
+    enum VacuumStatus _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL Vacuum::GetPVPRunning ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_PVPRunning(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline GaugesPtr Vacuum::GetGauges ( ) {
+    struct Gauges * _result = 0;
+    HRESULT _hr = get_Gauges(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return GaugesPtr(_result, false);
+}
+
+inline VARIANT_BOOL Vacuum::GetColumnValvesOpen ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ColumnValvesOpen(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Vacuum::PutColumnValvesOpen ( VARIANT_BOOL pO ) {
+    HRESULT _hr = put_ColumnValvesOpen(pO);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface Camera wrapper method implementations
+//
+
+inline HRESULT Camera::TakeExposure ( ) {
+    HRESULT _hr = raw_TakeExposure();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long Camera::GetStock ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Stock(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum ScreenPosition Camera::GetMainScreen ( ) {
+    enum ScreenPosition _result;
+    HRESULT _hr = get_MainScreen(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Camera::PutMainScreen ( enum ScreenPosition pVal ) {
+    HRESULT _hr = put_MainScreen(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL Camera::GetIsSmallScreenDown ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsSmallScreenDown(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double Camera::GetMeasuredExposureTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_MeasuredExposureTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t Camera::GetFilmText ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_FilmText(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void Camera::PutFilmText ( _bstr_t pVal ) {
+    HRESULT _hr = put_FilmText(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Camera::GetManualExposureTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_ManualExposureTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Camera::PutManualExposureTime ( double pVal ) {
+    HRESULT _hr = put_ManualExposureTime(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL Camera::GetPlateuMarker ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_PlateuMarker(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Camera::PutPlateuMarker ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_PlateuMarker(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long Camera::GetExposureNumber ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ExposureNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Camera::PutExposureNumber ( long pVal ) {
+    HRESULT _hr = put_ExposureNumber(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t Camera::GetUsercode ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Usercode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void Camera::PutUsercode ( _bstr_t pVal ) {
+    HRESULT _hr = put_Usercode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL Camera::GetManualExposure ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ManualExposure(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Camera::PutManualExposure ( VARIANT_BOOL ps ) {
+    HRESULT _hr = put_ManualExposure(ps);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum PlateLabelDateFormat Camera::GetPlateLabelDateType ( ) {
+    enum PlateLabelDateFormat _result;
+    HRESULT _hr = get_PlateLabelDateType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Camera::PutPlateLabelDateType ( enum PlateLabelDateFormat pVal ) {
+    HRESULT _hr = put_PlateLabelDateType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL Camera::GetScreenDim ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ScreenDim(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Camera::PutScreenDim ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_ScreenDim(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t Camera::GetScreenDimText ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ScreenDimText(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void Camera::PutScreenDimText ( _bstr_t pVal ) {
+    HRESULT _hr = put_ScreenDimText(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Camera::GetScreenCurrent ( ) {
+    double _result = 0;
+    HRESULT _hr = get_ScreenCurrent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface StagePosition wrapper method implementations
+//
+
+inline HRESULT StagePosition::GetAsArray ( double * pos ) {
+    HRESULT _hr = raw_GetAsArray(pos);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT StagePosition::SetAsArray ( double * pos ) {
+    HRESULT _hr = raw_SetAsArray(pos);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline double StagePosition::GetX ( ) {
+    double _result = 0;
+    HRESULT _hr = get_X(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void StagePosition::PutX ( double pVal ) {
+    HRESULT _hr = put_X(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double StagePosition::GetY ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void StagePosition::PutY ( double pVal ) {
+    HRESULT _hr = put_Y(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double StagePosition::GetZ ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Z(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void StagePosition::PutZ ( double pVal ) {
+    HRESULT _hr = put_Z(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double StagePosition::GetA ( ) {
+    double _result = 0;
+    HRESULT _hr = get_A(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void StagePosition::PutA ( double pVal ) {
+    HRESULT _hr = put_A(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double StagePosition::GetB ( ) {
+    double _result = 0;
+    HRESULT _hr = get_B(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void StagePosition::PutB ( double pVal ) {
+    HRESULT _hr = put_B(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface StageAxisData wrapper method implementations
+//
+
+inline double StageAxisData::GetMinPos ( ) {
+    double _result = 0;
+    HRESULT _hr = get_MinPos(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double StageAxisData::GetMaxPos ( ) {
+    double _result = 0;
+    HRESULT _hr = get_MaxPos(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MeasurementUnitType StageAxisData::GetUnitType ( ) {
+    enum MeasurementUnitType _result;
+    HRESULT _hr = get_UnitType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface Stage wrapper method implementations
+//
+
+inline HRESULT Stage::Goto ( struct StagePosition * newPos, enum StageAxes mask ) {
+    HRESULT _hr = raw_Goto(newPos, mask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Stage::MoveTo ( struct StagePosition * newPos, enum StageAxes mask ) {
+    HRESULT _hr = raw_MoveTo(newPos, mask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum StageStatus Stage::GetStatus ( ) {
+    enum StageStatus _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline StagePositionPtr Stage::GetPosition ( ) {
+    struct StagePosition * _result = 0;
+    HRESULT _hr = get_Position(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return StagePositionPtr(_result, false);
+}
+
+inline enum StageHolderType Stage::GetHolder ( ) {
+    enum StageHolderType _result;
+    HRESULT _hr = get_Holder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline StageAxisDataPtr Stage::GetAxisData ( enum StageAxes mask ) {
+    struct StageAxisData * _result = 0;
+    HRESULT _hr = get_AxisData(mask, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return StageAxisDataPtr(_result, false);
+}
+
+inline HRESULT Stage::GotoWithSpeed ( struct StagePosition * newPos, enum StageAxes mask, double speed ) {
+    HRESULT _hr = raw_GotoWithSpeed(newPos, mask, speed);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface Vector wrapper method implementations
+//
+
+inline double Vector::GetX ( ) {
+    double _result = 0;
+    HRESULT _hr = get_X(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Vector::PutX ( double pVal ) {
+    HRESULT _hr = put_X(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Vector::GetY ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Vector::PutY ( double pVal ) {
+    HRESULT _hr = put_Y(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface Illumination wrapper method implementations
+//
+
+inline HRESULT Illumination::Normalize ( enum IlluminationNormalization nm ) {
+    HRESULT _hr = raw_Normalize(nm);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum IlluminationMode Illumination::GetMode ( ) {
+    enum IlluminationMode _result;
+    HRESULT _hr = get_Mode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutMode ( enum IlluminationMode pMode ) {
+    HRESULT _hr = put_Mode(pMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long Illumination::GetSpotsizeIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SpotsizeIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutSpotsizeIndex ( long pSS ) {
+    HRESULT _hr = put_SpotsizeIndex(pSS);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Illumination::GetIntensity ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Intensity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutIntensity ( double pInt ) {
+    HRESULT _hr = put_Intensity(pInt);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL Illumination::GetIntensityZoomEnabled ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IntensityZoomEnabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutIntensityZoomEnabled ( VARIANT_BOOL pIZE ) {
+    HRESULT _hr = put_IntensityZoomEnabled(pIZE);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL Illumination::GetIntensityLimitEnabled ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IntensityLimitEnabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutIntensityLimitEnabled ( VARIANT_BOOL pILE ) {
+    HRESULT _hr = put_IntensityLimitEnabled(pILE);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL Illumination::GetBeamBlanked ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_BeamBlanked(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutBeamBlanked ( VARIANT_BOOL pBB ) {
+    HRESULT _hr = put_BeamBlanked(pBB);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Illumination::GetShift ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_Shift(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Illumination::PutShift ( struct Vector * pBS ) {
+    HRESULT _hr = put_Shift(pBS);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Illumination::GetTilt ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_Tilt(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Illumination::PutTilt ( struct Vector * pDFT ) {
+    HRESULT _hr = put_Tilt(pDFT);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Illumination::GetRotationCenter ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_RotationCenter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Illumination::PutRotationCenter ( struct Vector * pRC ) {
+    HRESULT _hr = put_RotationCenter(pRC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Illumination::GetCondenserStigmator ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_CondenserStigmator(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Illumination::PutCondenserStigmator ( struct Vector * pCStig ) {
+    HRESULT _hr = put_CondenserStigmator(pCStig);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum DarkFieldMode Illumination::GetDFMode ( ) {
+    enum DarkFieldMode _result;
+    HRESULT _hr = get_DFMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutDFMode ( enum DarkFieldMode pVal ) {
+    HRESULT _hr = put_DFMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum CondenserMode Illumination::GetCondenserMode ( ) {
+    enum CondenserMode _result;
+    HRESULT _hr = get_CondenserMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutCondenserMode ( enum CondenserMode pConMode ) {
+    HRESULT _hr = put_CondenserMode(pConMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Illumination::GetIlluminatedArea ( ) {
+    double _result = 0;
+    HRESULT _hr = get_IlluminatedArea(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutIlluminatedArea ( double pIll ) {
+    HRESULT _hr = put_IlluminatedArea(pIll);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Illumination::GetProbeDefocus ( ) {
+    double _result = 0;
+    HRESULT _hr = get_ProbeDefocus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double Illumination::GetConvergenceAngle ( ) {
+    double _result = 0;
+    HRESULT _hr = get_ConvergenceAngle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double Illumination::GetStemMagnification ( ) {
+    double _result = 0;
+    HRESULT _hr = get_StemMagnification(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutStemMagnification ( double pMag ) {
+    HRESULT _hr = put_StemMagnification(pMag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Illumination::GetStemRotation ( ) {
+    double _result = 0;
+    HRESULT _hr = get_StemRotation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Illumination::PutStemRotation ( double pVal ) {
+    HRESULT _hr = put_StemRotation(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Illumination::GetStemFullScanFieldOfView ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_StemFullScanFieldOfView(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+//
+// interface Projection wrapper method implementations
+//
+
+inline HRESULT Projection::ResetDefocus ( ) {
+    HRESULT _hr = raw_ResetDefocus();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Projection::Normalize ( enum ProjectionNormalization norm ) {
+    HRESULT _hr = raw_Normalize(norm);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Projection::ChangeProjectionIndex ( long addVal ) {
+    HRESULT _hr = raw_ChangeProjectionIndex(addVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum ProjectionMode Projection::GetMode ( ) {
+    enum ProjectionMode _result;
+    HRESULT _hr = get_Mode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutMode ( enum ProjectionMode pVal ) {
+    HRESULT _hr = put_Mode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Projection::GetFocus ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Focus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutFocus ( double pVal ) {
+    HRESULT _hr = put_Focus(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Projection::GetMagnification ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Magnification(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double Projection::GetCameraLength ( ) {
+    double _result = 0;
+    HRESULT _hr = get_CameraLength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long Projection::GetMagnificationIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MagnificationIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutMagnificationIndex ( long pVal ) {
+    HRESULT _hr = put_MagnificationIndex(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long Projection::GetCameraLengthIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_CameraLengthIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutCameraLengthIndex ( long pVal ) {
+    HRESULT _hr = put_CameraLengthIndex(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Projection::GetImageShift ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_ImageShift(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Projection::PutImageShift ( struct Vector * pVal ) {
+    HRESULT _hr = put_ImageShift(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Projection::GetImageBeamShift ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_ImageBeamShift(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Projection::PutImageBeamShift ( struct Vector * pVal ) {
+    HRESULT _hr = put_ImageBeamShift(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Projection::GetDiffractionShift ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_DiffractionShift(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Projection::PutDiffractionShift ( struct Vector * pVal ) {
+    HRESULT _hr = put_DiffractionShift(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Projection::GetDiffractionStigmator ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_DiffractionStigmator(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Projection::PutDiffractionStigmator ( struct Vector * pVal ) {
+    HRESULT _hr = put_DiffractionStigmator(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Projection::GetObjectiveStigmator ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_ObjectiveStigmator(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Projection::PutObjectiveStigmator ( struct Vector * pVal ) {
+    HRESULT _hr = put_ObjectiveStigmator(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Projection::GetDefocus ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Defocus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutDefocus ( double pVal ) {
+    HRESULT _hr = put_Defocus(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t Projection::GetSubModeString ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_SubModeString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline enum ProjectionSubMode Projection::GetSubMode ( ) {
+    enum ProjectionSubMode _result;
+    HRESULT _hr = get_SubMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long Projection::GetSubModeMinIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SubModeMinIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long Projection::GetSubModeMaxIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SubModeMaxIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double Projection::GetObjectiveExcitation ( ) {
+    double _result = 0;
+    HRESULT _hr = get_ObjectiveExcitation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long Projection::GetProjectionIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ProjectionIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutProjectionIndex ( long pVal ) {
+    HRESULT _hr = put_ProjectionIndex(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum LensProg Projection::GetLensProgram ( ) {
+    enum LensProg _result;
+    HRESULT _hr = get_LensProgram(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutLensProgram ( enum LensProg pVal ) {
+    HRESULT _hr = put_LensProgram(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Projection::GetImageRotation ( ) {
+    double _result = 0;
+    HRESULT _hr = get_ImageRotation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum ProjectionDetectorShift Projection::GetDetectorShift ( ) {
+    enum ProjectionDetectorShift _result;
+    HRESULT _hr = get_DetectorShift(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutDetectorShift ( enum ProjectionDetectorShift pVal ) {
+    HRESULT _hr = put_DetectorShift(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum ProjDetectorShiftMode Projection::GetDetectorShiftMode ( ) {
+    enum ProjDetectorShiftMode _result;
+    HRESULT _hr = get_DetectorShiftMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Projection::PutDetectorShiftMode ( enum ProjDetectorShiftMode pVal ) {
+    HRESULT _hr = put_DetectorShiftMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Projection::GetImageBeamTilt ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_ImageBeamTilt(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Projection::PutImageBeamTilt ( struct Vector * pVal ) {
+    HRESULT _hr = put_ImageBeamTilt(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface Gun wrapper method implementations
+//
+
+inline enum HightensionState Gun::GetHTState ( ) {
+    enum HightensionState _result;
+    HRESULT _hr = get_HTState(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Gun::PutHTState ( enum HightensionState ps ) {
+    HRESULT _hr = put_HTState(ps);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Gun::GetHTValue ( ) {
+    double _result = 0;
+    HRESULT _hr = get_HTValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void Gun::PutHTValue ( double phtval ) {
+    HRESULT _hr = put_HTValue(phtval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double Gun::GetHTMaxValue ( ) {
+    double _result = 0;
+    HRESULT _hr = get_HTMaxValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VectorPtr Gun::GetShift ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_Shift(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Gun::PutShift ( struct Vector * pBS ) {
+    HRESULT _hr = put_Shift(pBS);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr Gun::GetTilt ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_Tilt(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline void Gun::PutTilt ( struct Vector * pDFT ) {
+    HRESULT _hr = put_Tilt(pDFT);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IUserButton wrapper method implementations
+//
+
+inline _bstr_t IUserButton::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IUserButton::GetLabel ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Label(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IUserButton::GetAssignment ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Assignment(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUserButton::PutAssignment ( _bstr_t pas ) {
+    HRESULT _hr = put_Assignment(pas);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface UserButtons wrapper method implementations
+//
+
+inline long UserButtons::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IUserButtonPtr UserButtons::GetItem ( const _variant_t & index ) {
+    struct IUserButton * _result = 0;
+    HRESULT _hr = get_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUserButtonPtr(_result, false);
+}
+
+inline IUnknownPtr UserButtons::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface AutoLoader wrapper method implementations
+//
+
+inline HRESULT AutoLoader::LoadCartridge ( long fromSlot ) {
+    HRESULT _hr = raw_LoadCartridge(fromSlot);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT AutoLoader::UnloadCartridge ( ) {
+    HRESULT _hr = raw_UnloadCartridge();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT AutoLoader::PerformCassetteInventory ( ) {
+    HRESULT _hr = raw_PerformCassetteInventory();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT AutoLoader::BufferCycle ( ) {
+    HRESULT _hr = raw_BufferCycle();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL AutoLoader::GetAutoLoaderAvailable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_AutoLoaderAvailable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long AutoLoader::GetNumberOfCassetteSlots ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumberOfCassetteSlots(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum CassetteSlotStatus AutoLoader::GetSlotStatus ( long slot ) {
+    enum CassetteSlotStatus _result;
+    HRESULT _hr = get_SlotStatus(slot, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface TemperatureControl wrapper method implementations
+//
+
+inline HRESULT TemperatureControl::ForceRefill ( ) {
+    HRESULT _hr = raw_ForceRefill();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL TemperatureControl::GetTemperatureControlAvailable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_TemperatureControlAvailable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double TemperatureControl::GetRefrigerantLevel ( enum RefrigerantLevel rl ) {
+    double _result = 0;
+    HRESULT _hr = get_RefrigerantLevel(rl, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long TemperatureControl::GetDewarsRemainingTime ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DewarsRemainingTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL TemperatureControl::GetDewarsAreBusyFilling ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_DewarsAreBusyFilling(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface BlankerShutter wrapper method implementations
+//
+
+inline VARIANT_BOOL BlankerShutter::GetShutterOverrideOn ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ShutterOverrideOn(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void BlankerShutter::PutShutterOverrideOn ( VARIANT_BOOL pOverride ) {
+    HRESULT _hr = put_ShutterOverrideOn(pOverride);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface InstrumentModeControl wrapper method implementations
+//
+
+inline VARIANT_BOOL InstrumentModeControl::GetStemAvailable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_StemAvailable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum InstrumentMode InstrumentModeControl::GetInstrumentMode ( ) {
+    enum InstrumentMode _result;
+    HRESULT _hr = get_InstrumentMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void InstrumentModeControl::PutInstrumentMode ( enum InstrumentMode pMode ) {
+    HRESULT _hr = put_InstrumentMode(pMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface AcqImage wrapper method implementations
+//
+
+inline _bstr_t AcqImage::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long AcqImage::GetWidth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long AcqImage::GetHeight ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long AcqImage::GetDepth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Depth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline SAFEARRAY * AcqImage::GetAsSafeArray ( ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = get_AsSafeArray(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t AcqImage::GetAsVariant ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_AsVariant(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT AcqImage::AsFile ( _bstr_t fileName, enum AcqImageFileFormat imageFormat, VARIANT_BOOL bNormalize ) {
+    HRESULT _hr = raw_AsFile(fileName, imageFormat, bNormalize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface AcqImages wrapper method implementations
+//
+
+inline long AcqImages::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline AcqImagePtr AcqImages::GetItem ( const _variant_t & index ) {
+    struct AcqImage * _result = 0;
+    HRESULT _hr = get_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return AcqImagePtr(_result, false);
+}
+
+inline IUnknownPtr AcqImages::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface CCDCameraInfo wrapper method implementations
+//
+
+inline _bstr_t CCDCameraInfo::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long CCDCameraInfo::GetWidth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long CCDCameraInfo::GetHeight ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VectorPtr CCDCameraInfo::GetPixelSize ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_PixelSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+inline SAFEARRAY * CCDCameraInfo::GetBinnings ( ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = get_Binnings(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline SAFEARRAY * CCDCameraInfo::GetShutterModes ( ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = get_ShutterModes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum AcqShutterMode CCDCameraInfo::GetShutterMode ( ) {
+    enum AcqShutterMode _result;
+    HRESULT _hr = get_ShutterMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void CCDCameraInfo::PutShutterMode ( enum AcqShutterMode pVal ) {
+    HRESULT _hr = put_ShutterMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t CCDCameraInfo::GetBinningsAsVariant ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_BinningsAsVariant(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t CCDCameraInfo::GetShutterModesAsVariant ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_ShutterModesAsVariant(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface CCDAcqParams wrapper method implementations
+//
+
+inline enum AcqImageSize CCDAcqParams::GetImageSize ( ) {
+    enum AcqImageSize _result;
+    HRESULT _hr = get_ImageSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void CCDAcqParams::PutImageSize ( enum AcqImageSize pVal ) {
+    HRESULT _hr = put_ImageSize(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double CCDAcqParams::GetExposureTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_ExposureTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void CCDAcqParams::PutExposureTime ( double pVal ) {
+    HRESULT _hr = put_ExposureTime(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long CCDAcqParams::GetBinning ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Binning(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void CCDAcqParams::PutBinning ( long pVal ) {
+    HRESULT _hr = put_Binning(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum AcqImageCorrection CCDAcqParams::GetImageCorrection ( ) {
+    enum AcqImageCorrection _result;
+    HRESULT _hr = get_ImageCorrection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void CCDAcqParams::PutImageCorrection ( enum AcqImageCorrection pVal ) {
+    HRESULT _hr = put_ImageCorrection(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum AcqExposureMode CCDAcqParams::GetExposureMode ( ) {
+    enum AcqExposureMode _result;
+    HRESULT _hr = get_ExposureMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void CCDAcqParams::PutExposureMode ( enum AcqExposureMode pVal ) {
+    HRESULT _hr = put_ExposureMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double CCDAcqParams::GetMinPreExposureTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_MinPreExposureTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double CCDAcqParams::GetMaxPreExposureTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_MaxPreExposureTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double CCDAcqParams::GetPreExposureTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_PreExposureTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void CCDAcqParams::PutPreExposureTime ( double pVal ) {
+    HRESULT _hr = put_PreExposureTime(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double CCDAcqParams::GetMinPreExposurePauseTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_MinPreExposurePauseTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double CCDAcqParams::GetMaxPreExposurePauseTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_MaxPreExposurePauseTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double CCDAcqParams::GetPreExposurePauseTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_PreExposurePauseTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void CCDAcqParams::PutPreExposurePauseTime ( double pVal ) {
+    HRESULT _hr = put_PreExposurePauseTime(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface CCDCamera wrapper method implementations
+//
+
+inline CCDCameraInfoPtr CCDCamera::GetInfo ( ) {
+    struct CCDCameraInfo * _result = 0;
+    HRESULT _hr = get_Info(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return CCDCameraInfoPtr(_result, false);
+}
+
+inline CCDAcqParamsPtr CCDCamera::GetAcqParams ( ) {
+    struct CCDAcqParams * _result = 0;
+    HRESULT _hr = get_AcqParams(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return CCDAcqParamsPtr(_result, false);
+}
+
+inline void CCDCamera::PutAcqParams ( struct CCDAcqParams * pVal ) {
+    HRESULT _hr = put_AcqParams(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface CCDCameras wrapper method implementations
+//
+
+inline long CCDCameras::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline CCDCameraPtr CCDCameras::GetItem ( const _variant_t & index ) {
+    struct CCDCamera * _result = 0;
+    HRESULT _hr = get_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return CCDCameraPtr(_result, false);
+}
+
+inline IUnknownPtr CCDCameras::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface STEMDetectorInfo wrapper method implementations
+//
+
+inline _bstr_t STEMDetectorInfo::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline double STEMDetectorInfo::GetBrightness ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Brightness(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void STEMDetectorInfo::PutBrightness ( double pVal ) {
+    HRESULT _hr = put_Brightness(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double STEMDetectorInfo::GetContrast ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Contrast(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void STEMDetectorInfo::PutContrast ( double pVal ) {
+    HRESULT _hr = put_Contrast(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline SAFEARRAY * STEMDetectorInfo::GetBinnings ( ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = get_Binnings(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t STEMDetectorInfo::GetBinningsAsVariant ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_BinningsAsVariant(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface STEMDetector wrapper method implementations
+//
+
+inline STEMDetectorInfoPtr STEMDetector::GetInfo ( ) {
+    struct STEMDetectorInfo * _result = 0;
+    HRESULT _hr = get_Info(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return STEMDetectorInfoPtr(_result, false);
+}
+
+//
+// interface STEMAcqParams wrapper method implementations
+//
+
+inline enum AcqImageSize STEMAcqParams::GetImageSize ( ) {
+    enum AcqImageSize _result;
+    HRESULT _hr = get_ImageSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void STEMAcqParams::PutImageSize ( enum AcqImageSize pVal ) {
+    HRESULT _hr = put_ImageSize(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double STEMAcqParams::GetDwellTime ( ) {
+    double _result = 0;
+    HRESULT _hr = get_DwellTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void STEMAcqParams::PutDwellTime ( double pVal ) {
+    HRESULT _hr = put_DwellTime(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long STEMAcqParams::GetBinning ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Binning(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void STEMAcqParams::PutBinning ( long pVal ) {
+    HRESULT _hr = put_Binning(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VectorPtr STEMAcqParams::GetMaxResolution ( ) {
+    struct Vector * _result = 0;
+    HRESULT _hr = get_MaxResolution(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VectorPtr(_result, false);
+}
+
+//
+// interface STEMDetectors wrapper method implementations
+//
+
+inline long STEMDetectors::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline STEMDetectorPtr STEMDetectors::GetItem ( const _variant_t & index ) {
+    struct STEMDetector * _result = 0;
+    HRESULT _hr = get_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return STEMDetectorPtr(_result, false);
+}
+
+inline IUnknownPtr STEMDetectors::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline STEMAcqParamsPtr STEMDetectors::GetAcqParams ( ) {
+    struct STEMAcqParams * _result = 0;
+    HRESULT _hr = get_AcqParams(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return STEMAcqParamsPtr(_result, false);
+}
+
+inline void STEMDetectors::PutAcqParams ( struct STEMAcqParams * pVal ) {
+    HRESULT _hr = put_AcqParams(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface Acquisition wrapper method implementations
+//
+
+inline HRESULT Acquisition::AddAcqDevice ( IDispatch * pDevice ) {
+    HRESULT _hr = raw_AddAcqDevice(pDevice);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Acquisition::AddAcqDeviceByName ( _bstr_t deviceName ) {
+    HRESULT _hr = raw_AddAcqDeviceByName(deviceName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Acquisition::RemoveAcqDevice ( IDispatch * pDevice ) {
+    HRESULT _hr = raw_RemoveAcqDevice(pDevice);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Acquisition::RemoveAcqDeviceByName ( _bstr_t deviceName ) {
+    HRESULT _hr = raw_RemoveAcqDeviceByName(deviceName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Acquisition::RemoveAllAcqDevices ( ) {
+    HRESULT _hr = raw_RemoveAllAcqDevices();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline AcqImagesPtr Acquisition::AcquireImages ( ) {
+    struct AcqImages * _result = 0;
+    HRESULT _hr = raw_AcquireImages(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return AcqImagesPtr(_result, false);
+}
+
+inline CCDCamerasPtr Acquisition::GetCameras ( ) {
+    struct CCDCameras * _result = 0;
+    HRESULT _hr = get_Cameras(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return CCDCamerasPtr(_result, false);
+}
+
+inline STEMDetectorsPtr Acquisition::GetDetectors ( ) {
+    struct STEMDetectors * _result = 0;
+    HRESULT _hr = get_Detectors(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return STEMDetectorsPtr(_result, false);
+}
+
+//
+// interface Configuration wrapper method implementations
+//
+
+inline enum ProductFamily Configuration::GetProductFamily ( ) {
+    enum ProductFamily _result;
+    HRESULT _hr = get_ProductFamily(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum CondenserLensSystem Configuration::GetCondenserLensSystem ( ) {
+    enum CondenserLensSystem _result;
+    HRESULT _hr = get_CondenserLensSystem(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface Aperture wrapper method implementations
+//
+
+inline _bstr_t Aperture::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline enum ApertureType Aperture::GetType ( ) {
+    enum ApertureType _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double Aperture::GetDiameter ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Diameter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface ApertureCollection wrapper method implementations
+//
+
+inline long ApertureCollection::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline AperturePtr ApertureCollection::GetItem ( const _variant_t & index ) {
+    struct Aperture * _result = 0;
+    HRESULT _hr = get_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return AperturePtr(_result, false);
+}
+
+inline IUnknownPtr ApertureCollection::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface ApertureMechanism wrapper method implementations
+//
+
+inline ApertureCollectionPtr ApertureMechanism::GetApertureCollection ( ) {
+    struct ApertureCollection * _result = 0;
+    HRESULT _hr = get_ApertureCollection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ApertureCollectionPtr(_result, false);
+}
+
+inline enum MechanismId ApertureMechanism::GetId ( ) {
+    enum MechanismId _result;
+    HRESULT _hr = get_Id(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ApertureMechanism::SelectAperture ( struct Aperture * pVal ) {
+    HRESULT _hr = raw_SelectAperture(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline AperturePtr ApertureMechanism::GetSelectedAperture ( ) {
+    struct Aperture * _result = 0;
+    HRESULT _hr = get_SelectedAperture(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return AperturePtr(_result, false);
+}
+
+inline enum MechanismState ApertureMechanism::GetState ( ) {
+    enum MechanismState _result;
+    HRESULT _hr = get_State(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ApertureMechanism::GetIsRetractable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsRetractable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ApertureMechanism::Retract ( ) {
+    HRESULT _hr = raw_Retract();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ApertureMechanism::Enable ( ) {
+    HRESULT _hr = raw_Enable();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ApertureMechanism::Disable ( ) {
+    HRESULT _hr = raw_Disable();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ApertureMechanismCollection wrapper method implementations
+//
+
+inline long ApertureMechanismCollection::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline ApertureMechanismPtr ApertureMechanismCollection::GetItem ( const _variant_t & index ) {
+    struct ApertureMechanism * _result = 0;
+    HRESULT _hr = get_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ApertureMechanismPtr(_result, false);
+}
+
+inline IUnknownPtr ApertureMechanismCollection::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface InstrumentInterface wrapper method implementations
+//
+
+inline HRESULT InstrumentInterface::NormalizeAll ( ) {
+    HRESULT _hr = raw_NormalizeAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL InstrumentInterface::GetAutoNormalizeEnabled ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_AutoNormalizeEnabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void InstrumentInterface::PutAutoNormalizeEnabled ( VARIANT_BOOL pANE ) {
+    HRESULT _hr = put_AutoNormalizeEnabled(pANE);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT InstrumentInterface::ReturnError ( enum TEMScriptingError TE ) {
+    HRESULT _hr = raw_ReturnError(TE);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr InstrumentInterface::GetVector ( ) {
+    IDispatch * _result = 0;
+    HRESULT _hr = get_Vector(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IDispatchPtr InstrumentInterface::GetStagePosition ( ) {
+    IDispatch * _result = 0;
+    HRESULT _hr = get_StagePosition(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline VacuumPtr InstrumentInterface::GetVacuum ( ) {
+    struct Vacuum * _result = 0;
+    HRESULT _hr = get_Vacuum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return VacuumPtr(_result, false);
+}
+
+inline CameraPtr InstrumentInterface::GetCamera ( ) {
+    struct Camera * _result = 0;
+    HRESULT _hr = get_Camera(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return CameraPtr(_result, false);
+}
+
+inline StagePtr InstrumentInterface::GetStage ( ) {
+    struct Stage * _result = 0;
+    HRESULT _hr = get_Stage(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return StagePtr(_result, false);
+}
+
+inline IlluminationPtr InstrumentInterface::GetIllumination ( ) {
+    struct Illumination * _result = 0;
+    HRESULT _hr = get_Illumination(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IlluminationPtr(_result, false);
+}
+
+inline ProjectionPtr InstrumentInterface::GetProjection ( ) {
+    struct Projection * _result = 0;
+    HRESULT _hr = get_Projection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ProjectionPtr(_result, false);
+}
+
+inline GunPtr InstrumentInterface::GetGun ( ) {
+    struct Gun * _result = 0;
+    HRESULT _hr = get_Gun(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return GunPtr(_result, false);
+}
+
+inline UserButtonsPtr InstrumentInterface::GetUserButtons ( ) {
+    struct UserButtons * _result = 0;
+    HRESULT _hr = get_UserButtons(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return UserButtonsPtr(_result, false);
+}
+
+inline AutoLoaderPtr InstrumentInterface::GetAutoLoader ( ) {
+    struct AutoLoader * _result = 0;
+    HRESULT _hr = get_AutoLoader(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return AutoLoaderPtr(_result, false);
+}
+
+inline TemperatureControlPtr InstrumentInterface::GetTemperatureControl ( ) {
+    struct TemperatureControl * _result = 0;
+    HRESULT _hr = get_TemperatureControl(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return TemperatureControlPtr(_result, false);
+}
+
+inline BlankerShutterPtr InstrumentInterface::GetBlankerShutter ( ) {
+    struct BlankerShutter * _result = 0;
+    HRESULT _hr = get_BlankerShutter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return BlankerShutterPtr(_result, false);
+}
+
+inline InstrumentModeControlPtr InstrumentInterface::GetInstrumentModeControl ( ) {
+    struct InstrumentModeControl * _result = 0;
+    HRESULT _hr = get_InstrumentModeControl(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return InstrumentModeControlPtr(_result, false);
+}
+
+inline AcquisitionPtr InstrumentInterface::GetAcquisition ( ) {
+    struct Acquisition * _result = 0;
+    HRESULT _hr = get_Acquisition(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return AcquisitionPtr(_result, false);
+}
+
+inline ConfigurationPtr InstrumentInterface::GetConfiguration ( ) {
+    struct Configuration * _result = 0;
+    HRESULT _hr = get_Configuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ConfigurationPtr(_result, false);
+}
+
+inline ApertureMechanismCollectionPtr InstrumentInterface::GetApertureMechanismCollection ( ) {
+    struct ApertureMechanismCollection * _result = 0;
+    HRESULT _hr = get_ApertureMechanismCollection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ApertureMechanismCollectionPtr(_result, false);
+}

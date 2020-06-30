@@ -1,0 +1,11 @@
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.Form1.resources
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.Properties.Resources.resources
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\bin\Debug\TEMControlTest.exe
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\bin\Debug\TEMControlTest.pdb
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\bin\Debug\TEMControlWrapper.dll
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\bin\Debug\TEMControlWrapper.pdb
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.exe
+c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.pdb

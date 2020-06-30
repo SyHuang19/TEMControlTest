@@ -1,0 +1,2517 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (979072e1).
+//
+// c:\documents and settings\supervisor\my documents\visual studio 2010\projects\temcontroltest\temcontrolwrapper\debug\stdscript.tlh
+//
+// C++ source equivalent of Win32 type library C:\Titan\Scripting\StdScript.dll
+// compiler-generated file created 06/30/20 at 18:34:40 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace TEMScripting {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("bc0a2b03-10ff-11d3-ae00-00a024cba50c"))
+/* LIBID */ __TEMScripting;
+struct __declspec(uuid("02cdc9a2-1f1d-11d3-ae11-00a024cba50c"))
+/* dispinterface */ UserButtonEvent;
+struct /* coclass */ Instrument;
+struct __declspec(uuid("bc0a2b11-10ff-11d3-ae00-00a024cba50c"))
+/* dual interface */ InstrumentInterface;
+enum TEMScriptingError;
+struct __declspec(uuid("c7646442-1115-11d3-ae00-00a024cba50c"))
+/* dual interface */ Vacuum;
+enum VacuumStatus;
+struct __declspec(uuid("6e6f03b0-2ece-11d3-ae79-004095005b07"))
+/* dual interface */ Gauges;
+struct __declspec(uuid("52020820-18bf-11d3-86e1-00c04fc126dd"))
+/* dual interface */ Gauge;
+enum GaugeStatus;
+enum GaugePressureLevel;
+struct __declspec(uuid("9851bc41-1b8c-11d3-ae0a-00a024cba50c"))
+/* dual interface */ Camera;
+enum ScreenPosition;
+enum PlateLabelDateFormat;
+struct __declspec(uuid("e7ae1e41-1bf8-11d3-ae0b-00a024cba50c"))
+/* dual interface */ Stage;
+struct __declspec(uuid("9851bc4a-1b8c-11d3-ae0a-00a024cba50c"))
+/* dual interface */ StagePosition;
+enum StageAxes;
+enum StageStatus;
+enum StageHolderType;
+struct __declspec(uuid("8f1e91c2-b97d-45b8-87c9-423f5eb10b8a"))
+/* dual interface */ StageAxisData;
+enum MeasurementUnitType;
+struct __declspec(uuid("ef960690-1c38-11d3-ae0b-00a024cba50c"))
+/* dual interface */ Illumination;
+enum IlluminationNormalization;
+enum IlluminationMode;
+struct __declspec(uuid("9851bc47-1b8c-11d3-ae0a-00a024cba50c"))
+/* dual interface */ Vector;
+enum DarkFieldMode;
+enum CondenserMode;
+struct __declspec(uuid("b39c3ae1-1e41-11d3-ae0e-00a024cba50c"))
+/* dual interface */ Projection;
+enum ProjectionNormalization;
+enum ProjectionMode;
+enum ProjectionSubMode;
+enum LensProg;
+enum ProjectionDetectorShift;
+enum ProjDetectorShiftMode;
+struct __declspec(uuid("e6f00870-3164-11d3-b4c8-00a024cb9221"))
+/* dual interface */ Gun;
+enum HightensionState;
+struct __declspec(uuid("50c21d10-317f-11d3-b4c8-00a024cb9221"))
+/* dual interface */ UserButtons;
+struct __declspec(uuid("e6f00871-3164-11d3-b4c8-00a024cb9221"))
+/* dual interface */ IUserButton;
+struct __declspec(uuid("28df27ea-2058-41d0-abbd-167fb3bfcd8f"))
+/* dual interface */ AutoLoader;
+enum CassetteSlotStatus;
+struct __declspec(uuid("71b6e709-b21f-435f-9529-1aee55cfa029"))
+/* dual interface */ TemperatureControl;
+enum RefrigerantLevel;
+struct __declspec(uuid("f1f59bb0-f8a0-439d-a3bf-87f527b600c4"))
+/* dual interface */ BlankerShutter;
+struct __declspec(uuid("8dc0fc71-ff15-40d8-8174-092218d8b76b"))
+/* dual interface */ InstrumentModeControl;
+enum InstrumentMode;
+struct __declspec(uuid("d6bbf89c-22b8-468f-80a1-947ea89269ce"))
+/* dual interface */ Acquisition;
+struct __declspec(uuid("86365241-4d38-4642-b024-cf450ceb250b"))
+/* dual interface */ AcqImages;
+struct __declspec(uuid("e15f4810-43c6-489a-9e8a-588b0949e153"))
+/* dual interface */ AcqImage;
+enum AcqImageFileFormat;
+struct __declspec(uuid("c851d96c-96b2-4bdf-8df2-c0a01b76e265"))
+/* dual interface */ CCDCameras;
+struct __declspec(uuid("e44e1565-4131-4937-b273-78219e090845"))
+/* dual interface */ CCDCamera;
+struct __declspec(uuid("024ded60-b124-4514-bfe2-02c0f5c51db9"))
+/* dual interface */ CCDCameraInfo;
+enum AcqShutterMode;
+struct __declspec(uuid("c03db779-1345-42ab-9304-95b85789163d"))
+/* dual interface */ CCDAcqParams;
+enum AcqImageSize;
+enum AcqImageCorrection;
+enum AcqExposureMode;
+struct __declspec(uuid("35a2675d-e67b-4834-8940-85e7833c61a6"))
+/* dual interface */ STEMDetectors;
+struct __declspec(uuid("d77c0d65-a1dd-4d0a-af25-c280046a5719"))
+/* dual interface */ STEMDetector;
+struct __declspec(uuid("96de094b-9cdc-4796-8697-e7dd5dc3ec3f"))
+/* dual interface */ STEMDetectorInfo;
+struct __declspec(uuid("ddc14710-6152-4963-aea4-c67ba784c6b4"))
+/* dual interface */ STEMAcqParams;
+struct __declspec(uuid("39cacdaf-f47c-4bbf-9ffa-a7a737664ced"))
+/* dual interface */ Configuration;
+enum ProductFamily;
+enum CondenserLensSystem;
+struct __declspec(uuid("a5015a2d-0436-472e-9140-43dc805b1eee"))
+/* dual interface */ ApertureMechanismCollection;
+struct __declspec(uuid("86c13ce3-934e-47de-a211-2009e10e1ee1"))
+/* dual interface */ ApertureMechanism;
+struct __declspec(uuid("dd08f876-9fbb-4235-a47e-ff26ada00900"))
+/* dual interface */ ApertureCollection;
+struct __declspec(uuid("cbf4e5b8-378d-43dd-9c58-f588d5e3444b"))
+/* dual interface */ Aperture;
+enum ApertureType;
+enum MechanismId;
+enum MechanismState;
+struct /* coclass */ UserButton;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(UserButtonEvent, __uuidof(UserButtonEvent));
+_COM_SMARTPTR_TYPEDEF(Gauge, __uuidof(Gauge));
+_COM_SMARTPTR_TYPEDEF(Gauges, __uuidof(Gauges));
+_COM_SMARTPTR_TYPEDEF(Vacuum, __uuidof(Vacuum));
+_COM_SMARTPTR_TYPEDEF(Camera, __uuidof(Camera));
+_COM_SMARTPTR_TYPEDEF(StagePosition, __uuidof(StagePosition));
+_COM_SMARTPTR_TYPEDEF(StageAxisData, __uuidof(StageAxisData));
+_COM_SMARTPTR_TYPEDEF(Stage, __uuidof(Stage));
+_COM_SMARTPTR_TYPEDEF(Vector, __uuidof(Vector));
+_COM_SMARTPTR_TYPEDEF(Illumination, __uuidof(Illumination));
+_COM_SMARTPTR_TYPEDEF(Projection, __uuidof(Projection));
+_COM_SMARTPTR_TYPEDEF(Gun, __uuidof(Gun));
+_COM_SMARTPTR_TYPEDEF(IUserButton, __uuidof(IUserButton));
+_COM_SMARTPTR_TYPEDEF(UserButtons, __uuidof(UserButtons));
+_COM_SMARTPTR_TYPEDEF(AutoLoader, __uuidof(AutoLoader));
+_COM_SMARTPTR_TYPEDEF(TemperatureControl, __uuidof(TemperatureControl));
+_COM_SMARTPTR_TYPEDEF(BlankerShutter, __uuidof(BlankerShutter));
+_COM_SMARTPTR_TYPEDEF(InstrumentModeControl, __uuidof(InstrumentModeControl));
+_COM_SMARTPTR_TYPEDEF(AcqImage, __uuidof(AcqImage));
+_COM_SMARTPTR_TYPEDEF(AcqImages, __uuidof(AcqImages));
+_COM_SMARTPTR_TYPEDEF(CCDCameraInfo, __uuidof(CCDCameraInfo));
+_COM_SMARTPTR_TYPEDEF(CCDAcqParams, __uuidof(CCDAcqParams));
+_COM_SMARTPTR_TYPEDEF(CCDCamera, __uuidof(CCDCamera));
+_COM_SMARTPTR_TYPEDEF(CCDCameras, __uuidof(CCDCameras));
+_COM_SMARTPTR_TYPEDEF(STEMDetectorInfo, __uuidof(STEMDetectorInfo));
+_COM_SMARTPTR_TYPEDEF(STEMDetector, __uuidof(STEMDetector));
+_COM_SMARTPTR_TYPEDEF(STEMAcqParams, __uuidof(STEMAcqParams));
+_COM_SMARTPTR_TYPEDEF(STEMDetectors, __uuidof(STEMDetectors));
+_COM_SMARTPTR_TYPEDEF(Acquisition, __uuidof(Acquisition));
+_COM_SMARTPTR_TYPEDEF(Configuration, __uuidof(Configuration));
+_COM_SMARTPTR_TYPEDEF(Aperture, __uuidof(Aperture));
+_COM_SMARTPTR_TYPEDEF(ApertureCollection, __uuidof(ApertureCollection));
+_COM_SMARTPTR_TYPEDEF(ApertureMechanism, __uuidof(ApertureMechanism));
+_COM_SMARTPTR_TYPEDEF(ApertureMechanismCollection, __uuidof(ApertureMechanismCollection));
+_COM_SMARTPTR_TYPEDEF(InstrumentInterface, __uuidof(InstrumentInterface));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("02cdc9a2-1f1d-11d3-ae11-00a024cba50c"))
+UserButtonEvent : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT Pressed ( );
+};
+
+struct __declspec(uuid("02cdc9a1-1f1d-11d3-ae11-00a024cba50c"))
+Instrument;
+    // [ default ] interface InstrumentInterface
+
+enum TEMScriptingError
+{
+    E_NOT_OK = -2147155969,
+    E_VALUE_CLIP = -2147155970,
+    E_OUT_OF_RANGE = -2147155971,
+    E_NOT_IMPLEMENTED = -2147155972
+};
+
+enum VacuumStatus
+{
+    vsUnknown = 1,
+    vsOff = 2,
+    vsCameraAir = 3,
+    vsBusy = 4,
+    vsReady = 5,
+    vsElse = 6
+};
+
+enum GaugeStatus
+{
+    gsUndefined = 0,
+    gsUnderflow = 1,
+    gsOverflow = 2,
+    gsInvalid = 3,
+    gsValid = 4
+};
+
+enum GaugePressureLevel
+{
+    plGaugePressurelevelUndefined = 0,
+    plGaugePressurelevelLow = 1,
+    plGaugePressurelevelLowMedium = 2,
+    plGaugePressurelevelMediumHigh = 3,
+    plGaugePressurelevelHigh = 4
+};
+
+struct __declspec(uuid("52020820-18bf-11d3-86e1-00c04fc126dd"))
+Gauge : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetPressure))
+    double Pressure;
+    __declspec(property(get=GetStatus))
+    enum GaugeStatus Status;
+    __declspec(property(get=GetPressureLevel))
+    enum GaugePressureLevel PressureLevel;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Read ( );
+    _bstr_t GetName ( );
+    double GetPressure ( );
+    enum GaugeStatus GetStatus ( );
+    enum GaugePressureLevel GetPressureLevel ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Read ( ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Pressure (
+        /*[out,retval]*/ double * pPresure ) = 0;
+      virtual HRESULT __stdcall get_Status (
+        /*[out,retval]*/ enum GaugeStatus * pVal ) = 0;
+      virtual HRESULT __stdcall get_PressureLevel (
+        /*[out,retval]*/ enum GaugePressureLevel * pVal ) = 0;
+};
+
+struct __declspec(uuid("6e6f03b0-2ece-11d3-ae79-004095005b07"))
+Gauges : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    GaugePtr GetItem (
+        const _variant_t & index );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        VARIANT index,
+        /*[out,retval]*/ struct Gauge * * pG ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+};
+
+struct __declspec(uuid("c7646442-1115-11d3-ae00-00a024cba50c"))
+Vacuum : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStatus))
+    enum VacuumStatus Status;
+    __declspec(property(get=GetPVPRunning))
+    VARIANT_BOOL PVPRunning;
+    __declspec(property(get=GetGauges))
+    GaugesPtr Gauges;
+    __declspec(property(get=GetColumnValvesOpen,put=PutColumnValvesOpen))
+    VARIANT_BOOL ColumnValvesOpen;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT RunBufferCycle ( );
+    enum VacuumStatus GetStatus ( );
+    VARIANT_BOOL GetPVPRunning ( );
+    GaugesPtr GetGauges ( );
+    VARIANT_BOOL GetColumnValvesOpen ( );
+    void PutColumnValvesOpen (
+        VARIANT_BOOL pO );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_RunBufferCycle ( ) = 0;
+      virtual HRESULT __stdcall get_Status (
+        /*[out,retval]*/ enum VacuumStatus * pVal ) = 0;
+      virtual HRESULT __stdcall get_PVPRunning (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_Gauges (
+        /*[out,retval]*/ struct Gauges * * pG ) = 0;
+      virtual HRESULT __stdcall get_ColumnValvesOpen (
+        /*[out,retval]*/ VARIANT_BOOL * pO ) = 0;
+      virtual HRESULT __stdcall put_ColumnValvesOpen (
+        /*[in]*/ VARIANT_BOOL pO ) = 0;
+};
+
+enum ScreenPosition
+{
+    spUnknown = 1,
+    spUp = 2,
+    spDown = 3
+};
+
+enum PlateLabelDateFormat
+{
+    dtNoDate = 0,
+    dtDDMMYY = 1,
+    dtMMDDYY = 2,
+    dtYYMMDD = 3
+};
+
+struct __declspec(uuid("9851bc41-1b8c-11d3-ae0a-00a024cba50c"))
+Camera : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStock))
+    long Stock;
+    __declspec(property(get=GetMainScreen,put=PutMainScreen))
+    enum ScreenPosition MainScreen;
+    __declspec(property(get=GetIsSmallScreenDown))
+    VARIANT_BOOL IsSmallScreenDown;
+    __declspec(property(get=GetMeasuredExposureTime))
+    double MeasuredExposureTime;
+    __declspec(property(get=GetFilmText,put=PutFilmText))
+    _bstr_t FilmText;
+    __declspec(property(get=GetManualExposureTime,put=PutManualExposureTime))
+    double ManualExposureTime;
+    __declspec(property(get=GetPlateuMarker,put=PutPlateuMarker))
+    VARIANT_BOOL PlateuMarker;
+    __declspec(property(get=GetExposureNumber,put=PutExposureNumber))
+    long ExposureNumber;
+    __declspec(property(get=GetUsercode,put=PutUsercode))
+    _bstr_t Usercode;
+    __declspec(property(get=GetManualExposure,put=PutManualExposure))
+    VARIANT_BOOL ManualExposure;
+    __declspec(property(get=GetPlateLabelDateType,put=PutPlateLabelDateType))
+    enum PlateLabelDateFormat PlateLabelDateType;
+    __declspec(property(get=GetScreenDim,put=PutScreenDim))
+    VARIANT_BOOL ScreenDim;
+    __declspec(property(get=GetScreenDimText,put=PutScreenDimText))
+    _bstr_t ScreenDimText;
+    __declspec(property(get=GetScreenCurrent))
+    double ScreenCurrent;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT TakeExposure ( );
+    long GetStock ( );
+    enum ScreenPosition GetMainScreen ( );
+    void PutMainScreen (
+        enum ScreenPosition pVal );
+    VARIANT_BOOL GetIsSmallScreenDown ( );
+    double GetMeasuredExposureTime ( );
+    _bstr_t GetFilmText ( );
+    void PutFilmText (
+        _bstr_t pVal );
+    double GetManualExposureTime ( );
+    void PutManualExposureTime (
+        double pVal );
+    VARIANT_BOOL GetPlateuMarker ( );
+    void PutPlateuMarker (
+        VARIANT_BOOL pVal );
+    long GetExposureNumber ( );
+    void PutExposureNumber (
+        long pVal );
+    _bstr_t GetUsercode ( );
+    void PutUsercode (
+        _bstr_t pVal );
+    VARIANT_BOOL GetManualExposure ( );
+    void PutManualExposure (
+        VARIANT_BOOL ps );
+    enum PlateLabelDateFormat GetPlateLabelDateType ( );
+    void PutPlateLabelDateType (
+        enum PlateLabelDateFormat pVal );
+    VARIANT_BOOL GetScreenDim ( );
+    void PutScreenDim (
+        VARIANT_BOOL pVal );
+    _bstr_t GetScreenDimText ( );
+    void PutScreenDimText (
+        _bstr_t pVal );
+    double GetScreenCurrent ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_TakeExposure ( ) = 0;
+      virtual HRESULT __stdcall get_Stock (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_MainScreen (
+        /*[out,retval]*/ enum ScreenPosition * pVal ) = 0;
+      virtual HRESULT __stdcall put_MainScreen (
+        /*[in]*/ enum ScreenPosition pVal ) = 0;
+      virtual HRESULT __stdcall get_IsSmallScreenDown (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_MeasuredExposureTime (
+        /*[out,retval]*/ double * pET ) = 0;
+      virtual HRESULT __stdcall get_FilmText (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_FilmText (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ManualExposureTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_ManualExposureTime (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_PlateuMarker (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_PlateuMarker (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_ExposureNumber (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_ExposureNumber (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Usercode (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Usercode (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ManualExposure (
+        /*[out,retval]*/ VARIANT_BOOL * ps ) = 0;
+      virtual HRESULT __stdcall put_ManualExposure (
+        /*[in]*/ VARIANT_BOOL ps ) = 0;
+      virtual HRESULT __stdcall get_PlateLabelDateType (
+        /*[out,retval]*/ enum PlateLabelDateFormat * pVal ) = 0;
+      virtual HRESULT __stdcall put_PlateLabelDateType (
+        /*[in]*/ enum PlateLabelDateFormat pVal ) = 0;
+      virtual HRESULT __stdcall get_ScreenDim (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScreenDim (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_ScreenDimText (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScreenDimText (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ScreenCurrent (
+        /*[out,retval]*/ double * pSC ) = 0;
+};
+
+struct __declspec(uuid("9851bc4a-1b8c-11d3-ae0a-00a024cba50c"))
+StagePosition : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetX,put=PutX))
+    double X;
+    __declspec(property(get=GetY,put=PutY))
+    double Y;
+    __declspec(property(get=GetZ,put=PutZ))
+    double Z;
+    __declspec(property(get=GetA,put=PutA))
+    double A;
+    __declspec(property(get=GetB,put=PutB))
+    double B;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetAsArray (
+        double * pos );
+    HRESULT SetAsArray (
+        double * pos );
+    double GetX ( );
+    void PutX (
+        double pVal );
+    double GetY ( );
+    void PutY (
+        double pVal );
+    double GetZ ( );
+    void PutZ (
+        double pVal );
+    double GetA ( );
+    void PutA (
+        double pVal );
+    double GetB ( );
+    void PutB (
+        double pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetAsArray (
+        double * pos ) = 0;
+      virtual HRESULT __stdcall raw_SetAsArray (
+        double * pos ) = 0;
+      virtual HRESULT __stdcall get_X (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_X (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Y (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Y (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Z (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Z (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_A (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_A (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_B (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_B (
+        /*[in]*/ double pVal ) = 0;
+};
+
+enum StageAxes
+{
+    axisX = 1,
+    axisY = 2,
+    axisXY = 3,
+    axisZ = 4,
+    axisA = 8,
+    axisB = 16
+};
+
+enum StageStatus
+{
+    stReady = 0,
+    stDisabled = 1,
+    stNotReady = 2,
+    stGoing = 3,
+    stMoving = 4,
+    stWobbling = 5
+};
+
+enum StageHolderType
+{
+    hoNone = 0,
+    hoSingleTilt = 1,
+    hoDoubleTilt = 2,
+    hoInvalid = 4,
+    hoPolara = 5,
+    hoDualAxis = 6,
+    hoRotationAxis = 7
+};
+
+enum MeasurementUnitType
+{
+    MeasurementUnitType_Unknown = 0,
+    MeasurementUnitType_Meters = 1,
+    MeasurementUnitType_Radians = 2
+};
+
+struct __declspec(uuid("8f1e91c2-b97d-45b8-87c9-423f5eb10b8a"))
+StageAxisData : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMinPos))
+    double MinPos;
+    __declspec(property(get=GetMaxPos))
+    double MaxPos;
+    __declspec(property(get=GetUnitType))
+    enum MeasurementUnitType UnitType;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    double GetMinPos ( );
+    double GetMaxPos ( );
+    enum MeasurementUnitType GetUnitType ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_MinPos (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxPos (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_UnitType (
+        /*[out,retval]*/ enum MeasurementUnitType * pVal ) = 0;
+};
+
+struct __declspec(uuid("e7ae1e41-1bf8-11d3-ae0b-00a024cba50c"))
+Stage : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStatus))
+    enum StageStatus Status;
+    __declspec(property(get=GetPosition))
+    StagePositionPtr Position;
+    __declspec(property(get=GetHolder))
+    enum StageHolderType Holder;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Goto (
+        struct StagePosition * newPos,
+        enum StageAxes mask );
+    HRESULT MoveTo (
+        struct StagePosition * newPos,
+        enum StageAxes mask );
+    enum StageStatus GetStatus ( );
+    StagePositionPtr GetPosition ( );
+    enum StageHolderType GetHolder ( );
+    StageAxisDataPtr GetAxisData (
+        enum StageAxes mask );
+    HRESULT GotoWithSpeed (
+        struct StagePosition * newPos,
+        enum StageAxes mask,
+        double speed );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Goto (
+        struct StagePosition * newPos,
+        enum StageAxes mask ) = 0;
+      virtual HRESULT __stdcall raw_MoveTo (
+        struct StagePosition * newPos,
+        enum StageAxes mask ) = 0;
+      virtual HRESULT __stdcall get_Status (
+        /*[out,retval]*/ enum StageStatus * pVal ) = 0;
+      virtual HRESULT __stdcall get_Position (
+        /*[out,retval]*/ struct StagePosition * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Holder (
+        /*[out,retval]*/ enum StageHolderType * pVal ) = 0;
+      virtual HRESULT __stdcall get_AxisData (
+        enum StageAxes mask,
+        /*[out,retval]*/ struct StageAxisData * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GotoWithSpeed (
+        /*[in]*/ struct StagePosition * newPos,
+        /*[in]*/ enum StageAxes mask,
+        /*[in]*/ double speed ) = 0;
+};
+
+enum IlluminationNormalization
+{
+    nmSpotsize = 1,
+    nmIntensity = 2,
+    nmCondenser = 3,
+    nmMiniCondenser = 4,
+    nmObjectivePole = 5,
+    nmAll = 6
+};
+
+enum IlluminationMode
+{
+    imNanoProbe = 0,
+    imMicroProbe = 1
+};
+
+struct __declspec(uuid("9851bc47-1b8c-11d3-ae0a-00a024cba50c"))
+Vector : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetX,put=PutX))
+    double X;
+    __declspec(property(get=GetY,put=PutY))
+    double Y;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    double GetX ( );
+    void PutX (
+        double pVal );
+    double GetY ( );
+    void PutY (
+        double pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_X (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_X (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Y (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Y (
+        /*[in]*/ double pVal ) = 0;
+};
+
+enum DarkFieldMode
+{
+    dfOff = 1,
+    dfCartesian = 2,
+    dfConical = 3
+};
+
+enum CondenserMode
+{
+    cmParallelIllumination = 0,
+    cmProbeIllumination = 1
+};
+
+struct __declspec(uuid("ef960690-1c38-11d3-ae0b-00a024cba50c"))
+Illumination : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMode,put=PutMode))
+    enum IlluminationMode Mode;
+    __declspec(property(get=GetSpotsizeIndex,put=PutSpotsizeIndex))
+    long SpotsizeIndex;
+    __declspec(property(get=GetIntensity,put=PutIntensity))
+    double Intensity;
+    __declspec(property(get=GetIntensityZoomEnabled,put=PutIntensityZoomEnabled))
+    VARIANT_BOOL IntensityZoomEnabled;
+    __declspec(property(get=GetIntensityLimitEnabled,put=PutIntensityLimitEnabled))
+    VARIANT_BOOL IntensityLimitEnabled;
+    __declspec(property(get=GetBeamBlanked,put=PutBeamBlanked))
+    VARIANT_BOOL BeamBlanked;
+    __declspec(property(get=GetShift,put=PutShift))
+    VectorPtr Shift;
+    __declspec(property(get=GetTilt,put=PutTilt))
+    VectorPtr Tilt;
+    __declspec(property(get=GetRotationCenter,put=PutRotationCenter))
+    VectorPtr RotationCenter;
+    __declspec(property(get=GetCondenserStigmator,put=PutCondenserStigmator))
+    VectorPtr CondenserStigmator;
+    __declspec(property(get=GetDFMode,put=PutDFMode))
+    enum DarkFieldMode DFMode;
+    __declspec(property(get=GetCondenserMode,put=PutCondenserMode))
+    enum CondenserMode _CondenserMode;
+    __declspec(property(get=GetIlluminatedArea,put=PutIlluminatedArea))
+    double IlluminatedArea;
+    __declspec(property(get=GetProbeDefocus))
+    double ProbeDefocus;
+    __declspec(property(get=GetConvergenceAngle))
+    double ConvergenceAngle;
+    __declspec(property(get=GetStemMagnification,put=PutStemMagnification))
+    double StemMagnification;
+    __declspec(property(get=GetStemRotation,put=PutStemRotation))
+    double StemRotation;
+    __declspec(property(get=GetStemFullScanFieldOfView))
+    VectorPtr StemFullScanFieldOfView;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Normalize (
+        enum IlluminationNormalization nm );
+    enum IlluminationMode GetMode ( );
+    void PutMode (
+        enum IlluminationMode pMode );
+    long GetSpotsizeIndex ( );
+    void PutSpotsizeIndex (
+        long pSS );
+    double GetIntensity ( );
+    void PutIntensity (
+        double pInt );
+    VARIANT_BOOL GetIntensityZoomEnabled ( );
+    void PutIntensityZoomEnabled (
+        VARIANT_BOOL pIZE );
+    VARIANT_BOOL GetIntensityLimitEnabled ( );
+    void PutIntensityLimitEnabled (
+        VARIANT_BOOL pILE );
+    VARIANT_BOOL GetBeamBlanked ( );
+    void PutBeamBlanked (
+        VARIANT_BOOL pBB );
+    VectorPtr GetShift ( );
+    void PutShift (
+        struct Vector * pBS );
+    VectorPtr GetTilt ( );
+    void PutTilt (
+        struct Vector * pDFT );
+    VectorPtr GetRotationCenter ( );
+    void PutRotationCenter (
+        struct Vector * pRC );
+    VectorPtr GetCondenserStigmator ( );
+    void PutCondenserStigmator (
+        struct Vector * pCStig );
+    enum DarkFieldMode GetDFMode ( );
+    void PutDFMode (
+        enum DarkFieldMode pVal );
+    enum CondenserMode GetCondenserMode ( );
+    void PutCondenserMode (
+        enum CondenserMode pConMode );
+    double GetIlluminatedArea ( );
+    void PutIlluminatedArea (
+        double pIll );
+    double GetProbeDefocus ( );
+    double GetConvergenceAngle ( );
+    double GetStemMagnification ( );
+    void PutStemMagnification (
+        double pMag );
+    double GetStemRotation ( );
+    void PutStemRotation (
+        double pVal );
+    VectorPtr GetStemFullScanFieldOfView ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Normalize (
+        enum IlluminationNormalization nm ) = 0;
+      virtual HRESULT __stdcall get_Mode (
+        /*[out,retval]*/ enum IlluminationMode * pMode ) = 0;
+      virtual HRESULT __stdcall put_Mode (
+        /*[in]*/ enum IlluminationMode pMode ) = 0;
+      virtual HRESULT __stdcall get_SpotsizeIndex (
+        /*[out,retval]*/ long * pSS ) = 0;
+      virtual HRESULT __stdcall put_SpotsizeIndex (
+        /*[in]*/ long pSS ) = 0;
+      virtual HRESULT __stdcall get_Intensity (
+        /*[out,retval]*/ double * pInt ) = 0;
+      virtual HRESULT __stdcall put_Intensity (
+        /*[in]*/ double pInt ) = 0;
+      virtual HRESULT __stdcall get_IntensityZoomEnabled (
+        /*[out,retval]*/ VARIANT_BOOL * pIZE ) = 0;
+      virtual HRESULT __stdcall put_IntensityZoomEnabled (
+        /*[in]*/ VARIANT_BOOL pIZE ) = 0;
+      virtual HRESULT __stdcall get_IntensityLimitEnabled (
+        /*[out,retval]*/ VARIANT_BOOL * pILE ) = 0;
+      virtual HRESULT __stdcall put_IntensityLimitEnabled (
+        /*[in]*/ VARIANT_BOOL pILE ) = 0;
+      virtual HRESULT __stdcall get_BeamBlanked (
+        /*[out,retval]*/ VARIANT_BOOL * pBB ) = 0;
+      virtual HRESULT __stdcall put_BeamBlanked (
+        /*[in]*/ VARIANT_BOOL pBB ) = 0;
+      virtual HRESULT __stdcall get_Shift (
+        /*[out,retval]*/ struct Vector * * pBS ) = 0;
+      virtual HRESULT __stdcall put_Shift (
+        /*[in]*/ struct Vector * pBS ) = 0;
+      virtual HRESULT __stdcall get_Tilt (
+        /*[out,retval]*/ struct Vector * * pDFT ) = 0;
+      virtual HRESULT __stdcall put_Tilt (
+        /*[in]*/ struct Vector * pDFT ) = 0;
+      virtual HRESULT __stdcall get_RotationCenter (
+        /*[out,retval]*/ struct Vector * * pRC ) = 0;
+      virtual HRESULT __stdcall put_RotationCenter (
+        /*[in]*/ struct Vector * pRC ) = 0;
+      virtual HRESULT __stdcall get_CondenserStigmator (
+        /*[out,retval]*/ struct Vector * * pCStig ) = 0;
+      virtual HRESULT __stdcall put_CondenserStigmator (
+        /*[in]*/ struct Vector * pCStig ) = 0;
+      virtual HRESULT __stdcall get_DFMode (
+        /*[out,retval]*/ enum DarkFieldMode * pVal ) = 0;
+      virtual HRESULT __stdcall put_DFMode (
+        /*[in]*/ enum DarkFieldMode pVal ) = 0;
+      virtual HRESULT __stdcall get_CondenserMode (
+        /*[out,retval]*/ enum CondenserMode * pConMode ) = 0;
+      virtual HRESULT __stdcall put_CondenserMode (
+        /*[in]*/ enum CondenserMode pConMode ) = 0;
+      virtual HRESULT __stdcall get_IlluminatedArea (
+        /*[out,retval]*/ double * pIll ) = 0;
+      virtual HRESULT __stdcall put_IlluminatedArea (
+        /*[in]*/ double pIll ) = 0;
+      virtual HRESULT __stdcall get_ProbeDefocus (
+        /*[out,retval]*/ double * pDef ) = 0;
+      virtual HRESULT __stdcall get_ConvergenceAngle (
+        /*[out,retval]*/ double * pAng ) = 0;
+      virtual HRESULT __stdcall get_StemMagnification (
+        /*[out,retval]*/ double * pMag ) = 0;
+      virtual HRESULT __stdcall put_StemMagnification (
+        /*[in]*/ double pMag ) = 0;
+      virtual HRESULT __stdcall get_StemRotation (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_StemRotation (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_StemFullScanFieldOfView (
+        /*[out,retval]*/ struct Vector * * fov ) = 0;
+};
+
+enum ProjectionNormalization
+{
+    pnmObjective = 10,
+    pnmProjector = 11,
+    pnmAll = 12
+};
+
+enum ProjectionMode
+{
+    pmImaging = 1,
+    pmDiffraction = 2
+};
+
+enum ProjectionSubMode
+{
+    psmLM = 1,
+    psmMi = 2,
+    psmSA = 3,
+    psmMh = 4,
+    psmLAD = 5,
+    psmD = 6
+};
+
+enum LensProg
+{
+    lpRegular = 1,
+    lpEFTEM = 2
+};
+
+enum ProjectionDetectorShift
+{
+    pdsOnAxis = 0,
+    pdsNearAxis = 1,
+    pdsOffAxis = 2
+};
+
+enum ProjDetectorShiftMode
+{
+    pdsmAutoIgnore = 1,
+    pdsmManual = 2,
+    pdsmAlignment = 3
+};
+
+struct __declspec(uuid("b39c3ae1-1e41-11d3-ae0e-00a024cba50c"))
+Projection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMode,put=PutMode))
+    enum ProjectionMode Mode;
+    __declspec(property(get=GetFocus,put=PutFocus))
+    double Focus;
+    __declspec(property(get=GetMagnification))
+    double Magnification;
+    __declspec(property(get=GetCameraLength))
+    double CameraLength;
+    __declspec(property(get=GetMagnificationIndex,put=PutMagnificationIndex))
+    long MagnificationIndex;
+    __declspec(property(get=GetCameraLengthIndex,put=PutCameraLengthIndex))
+    long CameraLengthIndex;
+    __declspec(property(get=GetImageShift,put=PutImageShift))
+    VectorPtr ImageShift;
+    __declspec(property(get=GetImageBeamShift,put=PutImageBeamShift))
+    VectorPtr ImageBeamShift;
+    __declspec(property(get=GetDiffractionShift,put=PutDiffractionShift))
+    VectorPtr DiffractionShift;
+    __declspec(property(get=GetDiffractionStigmator,put=PutDiffractionStigmator))
+    VectorPtr DiffractionStigmator;
+    __declspec(property(get=GetObjectiveStigmator,put=PutObjectiveStigmator))
+    VectorPtr ObjectiveStigmator;
+    __declspec(property(get=GetDefocus,put=PutDefocus))
+    double Defocus;
+    __declspec(property(get=GetSubModeString))
+    _bstr_t SubModeString;
+    __declspec(property(get=GetSubMode))
+    enum ProjectionSubMode SubMode;
+    __declspec(property(get=GetSubModeMinIndex))
+    long SubModeMinIndex;
+    __declspec(property(get=GetSubModeMaxIndex))
+    long SubModeMaxIndex;
+    __declspec(property(get=GetObjectiveExcitation))
+    double ObjectiveExcitation;
+    __declspec(property(get=GetProjectionIndex,put=PutProjectionIndex))
+    long ProjectionIndex;
+    __declspec(property(get=GetLensProgram,put=PutLensProgram))
+    enum LensProg LensProgram;
+    __declspec(property(get=GetImageRotation))
+    double ImageRotation;
+    __declspec(property(get=GetDetectorShift,put=PutDetectorShift))
+    enum ProjectionDetectorShift DetectorShift;
+    __declspec(property(get=GetDetectorShiftMode,put=PutDetectorShiftMode))
+    enum ProjDetectorShiftMode DetectorShiftMode;
+    __declspec(property(get=GetImageBeamTilt,put=PutImageBeamTilt))
+    VectorPtr ImageBeamTilt;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ResetDefocus ( );
+    HRESULT Normalize (
+        enum ProjectionNormalization norm );
+    HRESULT ChangeProjectionIndex (
+        long addVal );
+    enum ProjectionMode GetMode ( );
+    void PutMode (
+        enum ProjectionMode pVal );
+    double GetFocus ( );
+    void PutFocus (
+        double pVal );
+    double GetMagnification ( );
+    double GetCameraLength ( );
+    long GetMagnificationIndex ( );
+    void PutMagnificationIndex (
+        long pVal );
+    long GetCameraLengthIndex ( );
+    void PutCameraLengthIndex (
+        long pVal );
+    VectorPtr GetImageShift ( );
+    void PutImageShift (
+        struct Vector * pVal );
+    VectorPtr GetImageBeamShift ( );
+    void PutImageBeamShift (
+        struct Vector * pVal );
+    VectorPtr GetDiffractionShift ( );
+    void PutDiffractionShift (
+        struct Vector * pVal );
+    VectorPtr GetDiffractionStigmator ( );
+    void PutDiffractionStigmator (
+        struct Vector * pVal );
+    VectorPtr GetObjectiveStigmator ( );
+    void PutObjectiveStigmator (
+        struct Vector * pVal );
+    double GetDefocus ( );
+    void PutDefocus (
+        double pVal );
+    _bstr_t GetSubModeString ( );
+    enum ProjectionSubMode GetSubMode ( );
+    long GetSubModeMinIndex ( );
+    long GetSubModeMaxIndex ( );
+    double GetObjectiveExcitation ( );
+    long GetProjectionIndex ( );
+    void PutProjectionIndex (
+        long pVal );
+    enum LensProg GetLensProgram ( );
+    void PutLensProgram (
+        enum LensProg pVal );
+    double GetImageRotation ( );
+    enum ProjectionDetectorShift GetDetectorShift ( );
+    void PutDetectorShift (
+        enum ProjectionDetectorShift pVal );
+    enum ProjDetectorShiftMode GetDetectorShiftMode ( );
+    void PutDetectorShiftMode (
+        enum ProjDetectorShiftMode pVal );
+    VectorPtr GetImageBeamTilt ( );
+    void PutImageBeamTilt (
+        struct Vector * pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ResetDefocus ( ) = 0;
+      virtual HRESULT __stdcall raw_Normalize (
+        /*[in]*/ enum ProjectionNormalization norm ) = 0;
+      virtual HRESULT __stdcall raw_ChangeProjectionIndex (
+        /*[in]*/ long addVal ) = 0;
+      virtual HRESULT __stdcall get_Mode (
+        /*[out,retval]*/ enum ProjectionMode * pVal ) = 0;
+      virtual HRESULT __stdcall put_Mode (
+        /*[in]*/ enum ProjectionMode pVal ) = 0;
+      virtual HRESULT __stdcall get_Focus (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Focus (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Magnification (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_CameraLength (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_MagnificationIndex (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_MagnificationIndex (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_CameraLengthIndex (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_CameraLengthIndex (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_ImageShift (
+        /*[out,retval]*/ struct Vector * * pVal ) = 0;
+      virtual HRESULT __stdcall put_ImageShift (
+        /*[in]*/ struct Vector * pVal ) = 0;
+      virtual HRESULT __stdcall get_ImageBeamShift (
+        /*[out,retval]*/ struct Vector * * pVal ) = 0;
+      virtual HRESULT __stdcall put_ImageBeamShift (
+        /*[in]*/ struct Vector * pVal ) = 0;
+      virtual HRESULT __stdcall get_DiffractionShift (
+        /*[out,retval]*/ struct Vector * * pVal ) = 0;
+      virtual HRESULT __stdcall put_DiffractionShift (
+        /*[in]*/ struct Vector * pVal ) = 0;
+      virtual HRESULT __stdcall get_DiffractionStigmator (
+        /*[out,retval]*/ struct Vector * * pVal ) = 0;
+      virtual HRESULT __stdcall put_DiffractionStigmator (
+        /*[in]*/ struct Vector * pVal ) = 0;
+      virtual HRESULT __stdcall get_ObjectiveStigmator (
+        /*[out,retval]*/ struct Vector * * pVal ) = 0;
+      virtual HRESULT __stdcall put_ObjectiveStigmator (
+        /*[in]*/ struct Vector * pVal ) = 0;
+      virtual HRESULT __stdcall get_Defocus (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Defocus (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_SubModeString (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_SubMode (
+        /*[out,retval]*/ enum ProjectionSubMode * pVal ) = 0;
+      virtual HRESULT __stdcall get_SubModeMinIndex (
+        /*[out,retval]*/ long * pN ) = 0;
+      virtual HRESULT __stdcall get_SubModeMaxIndex (
+        /*[out,retval]*/ long * pN ) = 0;
+      virtual HRESULT __stdcall get_ObjectiveExcitation (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_ProjectionIndex (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_ProjectionIndex (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_LensProgram (
+        /*[out,retval]*/ enum LensProg * pVal ) = 0;
+      virtual HRESULT __stdcall put_LensProgram (
+        /*[in]*/ enum LensProg pVal ) = 0;
+      virtual HRESULT __stdcall get_ImageRotation (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_DetectorShift (
+        /*[out,retval]*/ enum ProjectionDetectorShift * pVal ) = 0;
+      virtual HRESULT __stdcall put_DetectorShift (
+        /*[in]*/ enum ProjectionDetectorShift pVal ) = 0;
+      virtual HRESULT __stdcall get_DetectorShiftMode (
+        /*[out,retval]*/ enum ProjDetectorShiftMode * pVal ) = 0;
+      virtual HRESULT __stdcall put_DetectorShiftMode (
+        /*[in]*/ enum ProjDetectorShiftMode pVal ) = 0;
+      virtual HRESULT __stdcall get_ImageBeamTilt (
+        /*[out,retval]*/ struct Vector * * pVal ) = 0;
+      virtual HRESULT __stdcall put_ImageBeamTilt (
+        /*[in]*/ struct Vector * pVal ) = 0;
+};
+
+enum HightensionState
+{
+    htDisabled = 1,
+    htOff = 2,
+    htOn = 3
+};
+
+struct __declspec(uuid("e6f00870-3164-11d3-b4c8-00a024cb9221"))
+Gun : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetHTState,put=PutHTState))
+    enum HightensionState HTState;
+    __declspec(property(get=GetHTValue,put=PutHTValue))
+    double HTValue;
+    __declspec(property(get=GetHTMaxValue))
+    double HTMaxValue;
+    __declspec(property(get=GetShift,put=PutShift))
+    VectorPtr Shift;
+    __declspec(property(get=GetTilt,put=PutTilt))
+    VectorPtr Tilt;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum HightensionState GetHTState ( );
+    void PutHTState (
+        enum HightensionState ps );
+    double GetHTValue ( );
+    void PutHTValue (
+        double phtval );
+    double GetHTMaxValue ( );
+    VectorPtr GetShift ( );
+    void PutShift (
+        struct Vector * pBS );
+    VectorPtr GetTilt ( );
+    void PutTilt (
+        struct Vector * pDFT );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_HTState (
+        /*[out,retval]*/ enum HightensionState * ps ) = 0;
+      virtual HRESULT __stdcall put_HTState (
+        /*[in]*/ enum HightensionState ps ) = 0;
+      virtual HRESULT __stdcall get_HTValue (
+        /*[out,retval]*/ double * phtval ) = 0;
+      virtual HRESULT __stdcall put_HTValue (
+        /*[in]*/ double phtval ) = 0;
+      virtual HRESULT __stdcall get_HTMaxValue (
+        /*[out,retval]*/ double * pMaxHT ) = 0;
+      virtual HRESULT __stdcall get_Shift (
+        /*[out,retval]*/ struct Vector * * pBS ) = 0;
+      virtual HRESULT __stdcall put_Shift (
+        /*[in]*/ struct Vector * pBS ) = 0;
+      virtual HRESULT __stdcall get_Tilt (
+        /*[out,retval]*/ struct Vector * * pDFT ) = 0;
+      virtual HRESULT __stdcall put_Tilt (
+        /*[in]*/ struct Vector * pDFT ) = 0;
+};
+
+struct __declspec(uuid("e6f00871-3164-11d3-b4c8-00a024cb9221"))
+IUserButton : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetLabel))
+    _bstr_t Label;
+    __declspec(property(get=GetAssignment,put=PutAssignment))
+    _bstr_t Assignment;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    _bstr_t GetLabel ( );
+    _bstr_t GetAssignment ( );
+    void PutAssignment (
+        _bstr_t pas );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pName ) = 0;
+      virtual HRESULT __stdcall get_Label (
+        /*[out,retval]*/ BSTR * pName ) = 0;
+      virtual HRESULT __stdcall get_Assignment (
+        /*[out,retval]*/ BSTR * pas ) = 0;
+      virtual HRESULT __stdcall put_Assignment (
+        /*[in]*/ BSTR pas ) = 0;
+};
+
+struct __declspec(uuid("50c21d10-317f-11d3-b4c8-00a024cb9221"))
+UserButtons : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IUserButtonPtr GetItem (
+        const _variant_t & index );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        VARIANT index,
+        /*[out,retval]*/ struct IUserButton * * pUB ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+};
+
+enum CassetteSlotStatus
+{
+    CassetteSlotStatus_Unknown = 0,
+    CassetteSlotStatus_Occupied = 1,
+    CassetteSlotStatus_Empty = 2,
+    CassetteSlotStatus_Error = 3
+};
+
+struct __declspec(uuid("28df27ea-2058-41d0-abbd-167fb3bfcd8f"))
+AutoLoader : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAutoLoaderAvailable))
+    VARIANT_BOOL AutoLoaderAvailable;
+    __declspec(property(get=GetNumberOfCassetteSlots))
+    long NumberOfCassetteSlots;
+    __declspec(property(get=GetSlotStatus))
+    enum CassetteSlotStatus SlotStatus[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT LoadCartridge (
+        long fromSlot );
+    HRESULT UnloadCartridge ( );
+    HRESULT PerformCassetteInventory ( );
+    HRESULT BufferCycle ( );
+    VARIANT_BOOL GetAutoLoaderAvailable ( );
+    long GetNumberOfCassetteSlots ( );
+    enum CassetteSlotStatus GetSlotStatus (
+        long slot );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_LoadCartridge (
+        /*[in]*/ long fromSlot ) = 0;
+      virtual HRESULT __stdcall raw_UnloadCartridge ( ) = 0;
+      virtual HRESULT __stdcall raw_PerformCassetteInventory ( ) = 0;
+      virtual HRESULT __stdcall raw_BufferCycle ( ) = 0;
+      virtual HRESULT __stdcall get_AutoLoaderAvailable (
+        /*[out,retval]*/ VARIANT_BOOL * pAvail ) = 0;
+      virtual HRESULT __stdcall get_NumberOfCassetteSlots (
+        /*[out,retval]*/ long * nrOfSlots ) = 0;
+      virtual HRESULT __stdcall get_SlotStatus (
+        /*[in]*/ long slot,
+        /*[out,retval]*/ enum CassetteSlotStatus * Status ) = 0;
+};
+
+enum RefrigerantLevel
+{
+    RefrigerantLevel_AutoloaderDewar = 0,
+    RefrigerantLevel_ColumnDewar = 1,
+    RefrigerantLevel_HeliumDewar = 2
+};
+
+struct __declspec(uuid("71b6e709-b21f-435f-9529-1aee55cfa029"))
+TemperatureControl : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetTemperatureControlAvailable))
+    VARIANT_BOOL TemperatureControlAvailable;
+    __declspec(property(get=GetRefrigerantLevel))
+    double RefrigerantLevel[];
+    __declspec(property(get=GetDewarsRemainingTime))
+    long DewarsRemainingTime;
+    __declspec(property(get=GetDewarsAreBusyFilling))
+    VARIANT_BOOL DewarsAreBusyFilling;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ForceRefill ( );
+    VARIANT_BOOL GetTemperatureControlAvailable ( );
+    double GetRefrigerantLevel (
+        enum RefrigerantLevel rl );
+    long GetDewarsRemainingTime ( );
+    VARIANT_BOOL GetDewarsAreBusyFilling ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ForceRefill ( ) = 0;
+      virtual HRESULT __stdcall get_TemperatureControlAvailable (
+        /*[out,retval]*/ VARIANT_BOOL * pAvail ) = 0;
+      virtual HRESULT __stdcall get_RefrigerantLevel (
+        /*[in]*/ enum RefrigerantLevel rl,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_DewarsRemainingTime (
+        /*[out,retval]*/ long * time ) = 0;
+      virtual HRESULT __stdcall get_DewarsAreBusyFilling (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+};
+
+struct __declspec(uuid("f1f59bb0-f8a0-439d-a3bf-87f527b600c4"))
+BlankerShutter : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetShutterOverrideOn,put=PutShutterOverrideOn))
+    VARIANT_BOOL ShutterOverrideOn;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetShutterOverrideOn ( );
+    void PutShutterOverrideOn (
+        VARIANT_BOOL pOverride );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ShutterOverrideOn (
+        /*[out,retval]*/ VARIANT_BOOL * pOverride ) = 0;
+      virtual HRESULT __stdcall put_ShutterOverrideOn (
+        /*[in]*/ VARIANT_BOOL pOverride ) = 0;
+};
+
+enum InstrumentMode
+{
+    InstrumentMode_TEM = 0,
+    InstrumentMode_STEM = 1
+};
+
+struct __declspec(uuid("8dc0fc71-ff15-40d8-8174-092218d8b76b"))
+InstrumentModeControl : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStemAvailable))
+    VARIANT_BOOL StemAvailable;
+    __declspec(property(get=GetInstrumentMode,put=PutInstrumentMode))
+    enum InstrumentMode _InstrumentMode;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetStemAvailable ( );
+    enum InstrumentMode GetInstrumentMode ( );
+    void PutInstrumentMode (
+        enum InstrumentMode pMode );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_StemAvailable (
+        /*[out,retval]*/ VARIANT_BOOL * pAvail ) = 0;
+      virtual HRESULT __stdcall get_InstrumentMode (
+        /*[out,retval]*/ enum InstrumentMode * pMode ) = 0;
+      virtual HRESULT __stdcall put_InstrumentMode (
+        /*[in]*/ enum InstrumentMode pMode ) = 0;
+};
+
+enum AcqImageFileFormat
+{
+    AcqImageFileFormat_TIFF = 0,
+    AcqImageFileFormat_JPG = 1,
+    AcqImageFileFormat_PNG = 2
+};
+
+struct __declspec(uuid("e15f4810-43c6-489a-9e8a-588b0949e153"))
+AcqImage : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetWidth))
+    long Width;
+    __declspec(property(get=GetHeight))
+    long Height;
+    __declspec(property(get=GetDepth))
+    long Depth;
+    __declspec(property(get=GetAsSafeArray))
+    SAFEARRAY * AsSafeArray;
+    __declspec(property(get=GetAsVariant))
+    _variant_t AsVariant;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    long GetWidth ( );
+    long GetHeight ( );
+    long GetDepth ( );
+    SAFEARRAY * GetAsSafeArray ( );
+    _variant_t GetAsVariant ( );
+    HRESULT AsFile (
+        _bstr_t fileName,
+        enum AcqImageFileFormat imageFormat,
+        VARIANT_BOOL bNormalize );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Width (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Height (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Depth (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_AsSafeArray (
+        /*[out,retval]*/ SAFEARRAY * * pVal ) = 0;
+      virtual HRESULT __stdcall get_AsVariant (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall raw_AsFile (
+        /*[in]*/ BSTR fileName,
+        /*[in]*/ enum AcqImageFileFormat imageFormat,
+        /*[in]*/ VARIANT_BOOL bNormalize ) = 0;
+};
+
+struct __declspec(uuid("86365241-4d38-4642-b024-cf450ceb250b"))
+AcqImages : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    AcqImagePtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    AcqImagePtr GetItem (
+        const _variant_t & index );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT index,
+        /*[out,retval]*/ struct AcqImage * * pVal ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+};
+
+enum AcqShutterMode
+{
+    AcqShutterMode_PreSpecimen = 0,
+    AcqShutterMode_PostSpecimen = 1,
+    AcqShutterMode_Both = 2
+};
+
+struct __declspec(uuid("024ded60-b124-4514-bfe2-02c0f5c51db9"))
+CCDCameraInfo : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetWidth))
+    long Width;
+    __declspec(property(get=GetHeight))
+    long Height;
+    __declspec(property(get=GetPixelSize))
+    VectorPtr PixelSize;
+    __declspec(property(get=GetBinnings))
+    SAFEARRAY * Binnings;
+    __declspec(property(get=GetShutterModes))
+    SAFEARRAY * ShutterModes;
+    __declspec(property(get=GetShutterMode,put=PutShutterMode))
+    enum AcqShutterMode ShutterMode;
+    __declspec(property(get=GetBinningsAsVariant))
+    _variant_t BinningsAsVariant;
+    __declspec(property(get=GetShutterModesAsVariant))
+    _variant_t ShutterModesAsVariant;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    long GetWidth ( );
+    long GetHeight ( );
+    VectorPtr GetPixelSize ( );
+    SAFEARRAY * GetBinnings ( );
+    SAFEARRAY * GetShutterModes ( );
+    enum AcqShutterMode GetShutterMode ( );
+    void PutShutterMode (
+        enum AcqShutterMode pVal );
+    _variant_t GetBinningsAsVariant ( );
+    _variant_t GetShutterModesAsVariant ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Width (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Height (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_PixelSize (
+        /*[out,retval]*/ struct Vector * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Binnings (
+        /*[out,retval]*/ SAFEARRAY * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ShutterModes (
+        /*[out,retval]*/ SAFEARRAY * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ShutterMode (
+        /*[out,retval]*/ enum AcqShutterMode * pVal ) = 0;
+      virtual HRESULT __stdcall put_ShutterMode (
+        /*[in]*/ enum AcqShutterMode pVal ) = 0;
+      virtual HRESULT __stdcall get_BinningsAsVariant (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_ShutterModesAsVariant (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+};
+
+enum AcqImageSize
+{
+    AcqImageSize_Full = 0,
+    AcqImageSize_Half = 1,
+    AcqImageSize_Quarter = 2
+};
+
+enum AcqImageCorrection
+{
+    AcqImageCorrection_Unprocessed = 0,
+    AcqImageCorrection_Default = 1
+};
+
+enum AcqExposureMode
+{
+    AcqExposureMode_None = 0,
+    AcqExposureMode_Simultaneous = 1,
+    AcqExposureMode_PreExposure = 2,
+    AcqExposureMode_PreExposurePause = 3
+};
+
+struct __declspec(uuid("c03db779-1345-42ab-9304-95b85789163d"))
+CCDAcqParams : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetImageSize,put=PutImageSize))
+    enum AcqImageSize ImageSize;
+    __declspec(property(get=GetExposureTime,put=PutExposureTime))
+    double ExposureTime;
+    __declspec(property(get=GetBinning,put=PutBinning))
+    long Binning;
+    __declspec(property(get=GetImageCorrection,put=PutImageCorrection))
+    enum AcqImageCorrection ImageCorrection;
+    __declspec(property(get=GetExposureMode,put=PutExposureMode))
+    enum AcqExposureMode ExposureMode;
+    __declspec(property(get=GetMinPreExposureTime))
+    double MinPreExposureTime;
+    __declspec(property(get=GetMaxPreExposureTime))
+    double MaxPreExposureTime;
+    __declspec(property(get=GetPreExposureTime,put=PutPreExposureTime))
+    double PreExposureTime;
+    __declspec(property(get=GetMinPreExposurePauseTime))
+    double MinPreExposurePauseTime;
+    __declspec(property(get=GetMaxPreExposurePauseTime))
+    double MaxPreExposurePauseTime;
+    __declspec(property(get=GetPreExposurePauseTime,put=PutPreExposurePauseTime))
+    double PreExposurePauseTime;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum AcqImageSize GetImageSize ( );
+    void PutImageSize (
+        enum AcqImageSize pVal );
+    double GetExposureTime ( );
+    void PutExposureTime (
+        double pVal );
+    long GetBinning ( );
+    void PutBinning (
+        long pVal );
+    enum AcqImageCorrection GetImageCorrection ( );
+    void PutImageCorrection (
+        enum AcqImageCorrection pVal );
+    enum AcqExposureMode GetExposureMode ( );
+    void PutExposureMode (
+        enum AcqExposureMode pVal );
+    double GetMinPreExposureTime ( );
+    double GetMaxPreExposureTime ( );
+    double GetPreExposureTime ( );
+    void PutPreExposureTime (
+        double pVal );
+    double GetMinPreExposurePauseTime ( );
+    double GetMaxPreExposurePauseTime ( );
+    double GetPreExposurePauseTime ( );
+    void PutPreExposurePauseTime (
+        double pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ImageSize (
+        /*[out,retval]*/ enum AcqImageSize * pVal ) = 0;
+      virtual HRESULT __stdcall put_ImageSize (
+        /*[in]*/ enum AcqImageSize pVal ) = 0;
+      virtual HRESULT __stdcall get_ExposureTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_ExposureTime (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Binning (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Binning (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_ImageCorrection (
+        /*[out,retval]*/ enum AcqImageCorrection * pVal ) = 0;
+      virtual HRESULT __stdcall put_ImageCorrection (
+        /*[in]*/ enum AcqImageCorrection pVal ) = 0;
+      virtual HRESULT __stdcall get_ExposureMode (
+        /*[out,retval]*/ enum AcqExposureMode * pVal ) = 0;
+      virtual HRESULT __stdcall put_ExposureMode (
+        /*[in]*/ enum AcqExposureMode pVal ) = 0;
+      virtual HRESULT __stdcall get_MinPreExposureTime (
+        /*[out,retval]*/ double * minVal ) = 0;
+      virtual HRESULT __stdcall get_MaxPreExposureTime (
+        /*[out,retval]*/ double * maxVal ) = 0;
+      virtual HRESULT __stdcall get_PreExposureTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_PreExposureTime (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_MinPreExposurePauseTime (
+        /*[out,retval]*/ double * minVal ) = 0;
+      virtual HRESULT __stdcall get_MaxPreExposurePauseTime (
+        /*[out,retval]*/ double * maxVal ) = 0;
+      virtual HRESULT __stdcall get_PreExposurePauseTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_PreExposurePauseTime (
+        /*[in]*/ double pVal ) = 0;
+};
+
+struct __declspec(uuid("e44e1565-4131-4937-b273-78219e090845"))
+CCDCamera : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetInfo))
+    CCDCameraInfoPtr Info;
+    __declspec(property(get=GetAcqParams,put=PutAcqParams))
+    CCDAcqParamsPtr AcqParams;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    CCDCameraInfoPtr GetInfo ( );
+    CCDAcqParamsPtr GetAcqParams ( );
+    void PutAcqParams (
+        struct CCDAcqParams * pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Info (
+        /*[out,retval]*/ struct CCDCameraInfo * * pVal ) = 0;
+      virtual HRESULT __stdcall get_AcqParams (
+        /*[out,retval]*/ struct CCDAcqParams * * pVal ) = 0;
+      virtual HRESULT __stdcall put_AcqParams (
+        /*[in]*/ struct CCDAcqParams * pVal ) = 0;
+};
+
+struct __declspec(uuid("c851d96c-96b2-4bdf-8df2-c0a01b76e265"))
+CCDCameras : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    CCDCameraPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    CCDCameraPtr GetItem (
+        const _variant_t & index );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT index,
+        /*[out,retval]*/ struct CCDCamera * * pVal ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+};
+
+struct __declspec(uuid("96de094b-9cdc-4796-8697-e7dd5dc3ec3f"))
+STEMDetectorInfo : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetBrightness,put=PutBrightness))
+    double Brightness;
+    __declspec(property(get=GetContrast,put=PutContrast))
+    double Contrast;
+    __declspec(property(get=GetBinnings))
+    SAFEARRAY * Binnings;
+    __declspec(property(get=GetBinningsAsVariant))
+    _variant_t BinningsAsVariant;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    double GetBrightness ( );
+    void PutBrightness (
+        double pVal );
+    double GetContrast ( );
+    void PutContrast (
+        double pVal );
+    SAFEARRAY * GetBinnings ( );
+    _variant_t GetBinningsAsVariant ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Brightness (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Brightness (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Contrast (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Contrast (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Binnings (
+        /*[out,retval]*/ SAFEARRAY * * pVal ) = 0;
+      virtual HRESULT __stdcall get_BinningsAsVariant (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+};
+
+struct __declspec(uuid("d77c0d65-a1dd-4d0a-af25-c280046a5719"))
+STEMDetector : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetInfo))
+    STEMDetectorInfoPtr Info;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    STEMDetectorInfoPtr GetInfo ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Info (
+        /*[out,retval]*/ struct STEMDetectorInfo * * pVal ) = 0;
+};
+
+struct __declspec(uuid("ddc14710-6152-4963-aea4-c67ba784c6b4"))
+STEMAcqParams : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetImageSize,put=PutImageSize))
+    enum AcqImageSize ImageSize;
+    __declspec(property(get=GetDwellTime,put=PutDwellTime))
+    double DwellTime;
+    __declspec(property(get=GetBinning,put=PutBinning))
+    long Binning;
+    __declspec(property(get=GetMaxResolution))
+    VectorPtr MaxResolution;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum AcqImageSize GetImageSize ( );
+    void PutImageSize (
+        enum AcqImageSize pVal );
+    double GetDwellTime ( );
+    void PutDwellTime (
+        double pVal );
+    long GetBinning ( );
+    void PutBinning (
+        long pVal );
+    VectorPtr GetMaxResolution ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ImageSize (
+        /*[out,retval]*/ enum AcqImageSize * pVal ) = 0;
+      virtual HRESULT __stdcall put_ImageSize (
+        /*[in]*/ enum AcqImageSize pVal ) = 0;
+      virtual HRESULT __stdcall get_DwellTime (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_DwellTime (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Binning (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Binning (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_MaxResolution (
+        /*[out,retval]*/ struct Vector * * p ) = 0;
+};
+
+struct __declspec(uuid("35a2675d-e67b-4834-8940-85e7833c61a6"))
+STEMDetectors : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    STEMDetectorPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetAcqParams,put=PutAcqParams))
+    STEMAcqParamsPtr AcqParams;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    STEMDetectorPtr GetItem (
+        const _variant_t & index );
+    IUnknownPtr Get_NewEnum ( );
+    STEMAcqParamsPtr GetAcqParams ( );
+    void PutAcqParams (
+        struct STEMAcqParams * pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT index,
+        /*[out,retval]*/ struct STEMDetector * * pVal ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+      virtual HRESULT __stdcall get_AcqParams (
+        /*[out,retval]*/ struct STEMAcqParams * * pVal ) = 0;
+      virtual HRESULT __stdcall put_AcqParams (
+        /*[in]*/ struct STEMAcqParams * pVal ) = 0;
+};
+
+struct __declspec(uuid("d6bbf89c-22b8-468f-80a1-947ea89269ce"))
+Acquisition : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCameras))
+    CCDCamerasPtr Cameras;
+    __declspec(property(get=GetDetectors))
+    STEMDetectorsPtr Detectors;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT AddAcqDevice (
+        IDispatch * pDevice );
+    HRESULT AddAcqDeviceByName (
+        _bstr_t deviceName );
+    HRESULT RemoveAcqDevice (
+        IDispatch * pDevice );
+    HRESULT RemoveAcqDeviceByName (
+        _bstr_t deviceName );
+    HRESULT RemoveAllAcqDevices ( );
+    AcqImagesPtr AcquireImages ( );
+    CCDCamerasPtr GetCameras ( );
+    STEMDetectorsPtr GetDetectors ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_AddAcqDevice (
+        /*[in]*/ IDispatch * pDevice ) = 0;
+      virtual HRESULT __stdcall raw_AddAcqDeviceByName (
+        /*[in]*/ BSTR deviceName ) = 0;
+      virtual HRESULT __stdcall raw_RemoveAcqDevice (
+        /*[in]*/ IDispatch * pDevice ) = 0;
+      virtual HRESULT __stdcall raw_RemoveAcqDeviceByName (
+        /*[in]*/ BSTR deviceName ) = 0;
+      virtual HRESULT __stdcall raw_RemoveAllAcqDevices ( ) = 0;
+      virtual HRESULT __stdcall raw_AcquireImages (
+        /*[out,retval]*/ struct AcqImages * * ppImageCol ) = 0;
+      virtual HRESULT __stdcall get_Cameras (
+        /*[out,retval]*/ struct CCDCameras * * pCol ) = 0;
+      virtual HRESULT __stdcall get_Detectors (
+        /*[out,retval]*/ struct STEMDetectors * * pCol ) = 0;
+};
+
+enum ProductFamily
+{
+    ProductFamily_Tecnai = 0,
+    ProductFamily_Titan = 1
+};
+
+enum CondenserLensSystem
+{
+    CondenserLensSystem_TwoCondenserLenses = 0,
+    CondenserLensSystem_ThreeCondenserLenses = 1
+};
+
+struct __declspec(uuid("39cacdaf-f47c-4bbf-9ffa-a7a737664ced"))
+Configuration : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetProductFamily))
+    enum ProductFamily _ProductFamily;
+    __declspec(property(get=GetCondenserLensSystem))
+    enum CondenserLensSystem _CondenserLensSystem;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum ProductFamily GetProductFamily ( );
+    enum CondenserLensSystem GetCondenserLensSystem ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ProductFamily (
+        /*[out,retval]*/ enum ProductFamily * pVal ) = 0;
+      virtual HRESULT __stdcall get_CondenserLensSystem (
+        /*[out,retval]*/ enum CondenserLensSystem * pVal ) = 0;
+};
+
+enum ApertureType
+{
+    ApertureType_Unknown = 0,
+    ApertureType_Circular = 1,
+    ApertureType_Biprism = 2,
+    ApertureType_EnergySlit = 3,
+    ApertureType_FaradayCup = 4
+};
+
+struct __declspec(uuid("cbf4e5b8-378d-43dd-9c58-f588d5e3444b"))
+Aperture : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetType))
+    enum ApertureType Type;
+    __declspec(property(get=GetDiameter))
+    double Diameter;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    enum ApertureType GetType ( );
+    double GetDiameter ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Type (
+        /*[out,retval]*/ enum ApertureType * pVal ) = 0;
+      virtual HRESULT __stdcall get_Diameter (
+        /*[out,retval]*/ double * pVal ) = 0;
+};
+
+struct __declspec(uuid("dd08f876-9fbb-4235-a47e-ff26ada00900"))
+ApertureCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    AperturePtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    AperturePtr GetItem (
+        const _variant_t & index );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT index,
+        /*[out,retval]*/ struct Aperture * * pVal ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+};
+
+enum MechanismId
+{
+    MechanismId_Unknown = 0,
+    MechanismId_C1 = 1,
+    MechanismId_C2 = 2,
+    MechanismId_C3 = 3,
+    MechanismId_OBJ = 4,
+    MechanismId_SA = 5
+};
+
+enum MechanismState
+{
+    MechanismState_Disabled = 0,
+    MechanismState_Inserted = 1,
+    MechanismState_Moving = 2,
+    MechanismState_Retracted = 3,
+    MechanismState_Arbitrary = 4,
+    MechanismState_Homing = 5,
+    MechanismState_Aligning = 6,
+    MechanismState_Error = 7
+};
+
+struct __declspec(uuid("86c13ce3-934e-47de-a211-2009e10e1ee1"))
+ApertureMechanism : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetApertureCollection))
+    ApertureCollectionPtr ApertureCollection;
+    __declspec(property(get=GetId))
+    enum MechanismId Id;
+    __declspec(property(get=GetSelectedAperture))
+    AperturePtr SelectedAperture;
+    __declspec(property(get=GetState))
+    enum MechanismState State;
+    __declspec(property(get=GetIsRetractable))
+    VARIANT_BOOL IsRetractable;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ApertureCollectionPtr GetApertureCollection ( );
+    enum MechanismId GetId ( );
+    HRESULT SelectAperture (
+        struct Aperture * pVal );
+    AperturePtr GetSelectedAperture ( );
+    enum MechanismState GetState ( );
+    VARIANT_BOOL GetIsRetractable ( );
+    HRESULT Retract ( );
+    HRESULT Enable ( );
+    HRESULT Disable ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ApertureCollection (
+        /*[out,retval]*/ struct ApertureCollection * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Id (
+        /*[out,retval]*/ enum MechanismId * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SelectAperture (
+        /*[in]*/ struct Aperture * pVal ) = 0;
+      virtual HRESULT __stdcall get_SelectedAperture (
+        /*[out,retval]*/ struct Aperture * * pVal ) = 0;
+      virtual HRESULT __stdcall get_State (
+        /*[out,retval]*/ enum MechanismState * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsRetractable (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Retract ( ) = 0;
+      virtual HRESULT __stdcall raw_Enable ( ) = 0;
+      virtual HRESULT __stdcall raw_Disable ( ) = 0;
+};
+
+struct __declspec(uuid("a5015a2d-0436-472e-9140-43dc805b1eee"))
+ApertureMechanismCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    ApertureMechanismPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    ApertureMechanismPtr GetItem (
+        const _variant_t & index );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ VARIANT index,
+        /*[out,retval]*/ struct ApertureMechanism * * pVal ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * pVal ) = 0;
+};
+
+struct __declspec(uuid("bc0a2b11-10ff-11d3-ae00-00a024cba50c"))
+InstrumentInterface : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetConfiguration))
+    ConfigurationPtr Configuration;
+    __declspec(property(get=GetApertureMechanismCollection))
+    ApertureMechanismCollectionPtr ApertureMechanismCollection;
+    __declspec(property(get=GetAutoNormalizeEnabled,put=PutAutoNormalizeEnabled))
+    VARIANT_BOOL AutoNormalizeEnabled;
+    __declspec(property(get=GetVector))
+    IDispatchPtr Vector;
+    __declspec(property(get=GetStagePosition))
+    IDispatchPtr StagePosition;
+    __declspec(property(get=GetVacuum))
+    VacuumPtr Vacuum;
+    __declspec(property(get=GetCamera))
+    CameraPtr Camera;
+    __declspec(property(get=GetStage))
+    StagePtr Stage;
+    __declspec(property(get=GetIllumination))
+    IlluminationPtr Illumination;
+    __declspec(property(get=GetProjection))
+    ProjectionPtr Projection;
+    __declspec(property(get=GetGun))
+    GunPtr Gun;
+    __declspec(property(get=GetUserButtons))
+    UserButtonsPtr UserButtons;
+    __declspec(property(get=GetAutoLoader))
+    AutoLoaderPtr AutoLoader;
+    __declspec(property(get=GetTemperatureControl))
+    TemperatureControlPtr TemperatureControl;
+    __declspec(property(get=GetBlankerShutter))
+    BlankerShutterPtr BlankerShutter;
+    __declspec(property(get=GetInstrumentModeControl))
+    InstrumentModeControlPtr InstrumentModeControl;
+    __declspec(property(get=GetAcquisition))
+    AcquisitionPtr Acquisition;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT NormalizeAll ( );
+    VARIANT_BOOL GetAutoNormalizeEnabled ( );
+    void PutAutoNormalizeEnabled (
+        VARIANT_BOOL pANE );
+    HRESULT ReturnError (
+        enum TEMScriptingError TE );
+    IDispatchPtr GetVector ( );
+    IDispatchPtr GetStagePosition ( );
+    VacuumPtr GetVacuum ( );
+    CameraPtr GetCamera ( );
+    StagePtr GetStage ( );
+    IlluminationPtr GetIllumination ( );
+    ProjectionPtr GetProjection ( );
+    GunPtr GetGun ( );
+    UserButtonsPtr GetUserButtons ( );
+    AutoLoaderPtr GetAutoLoader ( );
+    TemperatureControlPtr GetTemperatureControl ( );
+    BlankerShutterPtr GetBlankerShutter ( );
+    InstrumentModeControlPtr GetInstrumentModeControl ( );
+    AcquisitionPtr GetAcquisition ( );
+    ConfigurationPtr GetConfiguration ( );
+    ApertureMechanismCollectionPtr GetApertureMechanismCollection ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_NormalizeAll ( ) = 0;
+      virtual HRESULT __stdcall get_AutoNormalizeEnabled (
+        /*[out,retval]*/ VARIANT_BOOL * pANE ) = 0;
+      virtual HRESULT __stdcall put_AutoNormalizeEnabled (
+        /*[in]*/ VARIANT_BOOL pANE ) = 0;
+      virtual HRESULT __stdcall raw_ReturnError (
+        /*[in]*/ enum TEMScriptingError TE ) = 0;
+      virtual HRESULT __stdcall get_Vector (
+        /*[out,retval]*/ IDispatch * * pVector ) = 0;
+      virtual HRESULT __stdcall get_StagePosition (
+        /*[out,retval]*/ IDispatch * * pStp ) = 0;
+      virtual HRESULT __stdcall get_Vacuum (
+        /*[out,retval]*/ struct Vacuum * * pVac ) = 0;
+      virtual HRESULT __stdcall get_Camera (
+        /*[out,retval]*/ struct Camera * * pCamera ) = 0;
+      virtual HRESULT __stdcall get_Stage (
+        /*[out,retval]*/ struct Stage * * pStage ) = 0;
+      virtual HRESULT __stdcall get_Illumination (
+        /*[out,retval]*/ struct Illumination * * pI ) = 0;
+      virtual HRESULT __stdcall get_Projection (
+        /*[out,retval]*/ struct Projection * * pP ) = 0;
+      virtual HRESULT __stdcall get_Gun (
+        /*[out,retval]*/ struct Gun * * pG ) = 0;
+      virtual HRESULT __stdcall get_UserButtons (
+        /*[out,retval]*/ struct UserButtons * * pUBS ) = 0;
+      virtual HRESULT __stdcall get_AutoLoader (
+        /*[out,retval]*/ struct AutoLoader * * pAL ) = 0;
+      virtual HRESULT __stdcall get_TemperatureControl (
+        /*[out,retval]*/ struct TemperatureControl * * pTC ) = 0;
+      virtual HRESULT __stdcall get_BlankerShutter (
+        /*[out,retval]*/ struct BlankerShutter * * pBS ) = 0;
+      virtual HRESULT __stdcall get_InstrumentModeControl (
+        /*[out,retval]*/ struct InstrumentModeControl * * pIMC ) = 0;
+      virtual HRESULT __stdcall get_Acquisition (
+        /*[out,retval]*/ struct Acquisition * * pIAcq ) = 0;
+      virtual HRESULT __stdcall get_Configuration (
+        /*[out,retval]*/ struct Configuration * * pIConfig ) = 0;
+      virtual HRESULT __stdcall get_ApertureMechanismCollection (
+        /*[out,retval]*/ struct ApertureMechanismCollection * * pApertureMechanismCollection ) = 0;
+};
+
+struct __declspec(uuid("3a4ce1f0-3a05-11d3-ae81-004095005b07"))
+UserButton;
+    // [ default ] interface IUserButton
+    // [ default, source ] dispinterface UserButtonEvent
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_TEMScripting =
+    {0xbc0a2b03,0x10ff,0x11d3,{0xae,0x00,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) DIID_UserButtonEvent =
+    {0x02cdc9a2,0x1f1d,0x11d3,{0xae,0x11,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) CLSID_Instrument =
+    {0x02cdc9a1,0x1f1d,0x11d3,{0xae,0x11,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) IID_Gauge =
+    {0x52020820,0x18bf,0x11d3,{0x86,0xe1,0x00,0xc0,0x4f,0xc1,0x26,0xdd}};
+extern "C" const GUID __declspec(selectany) IID_Gauges =
+    {0x6e6f03b0,0x2ece,0x11d3,{0xae,0x79,0x00,0x40,0x95,0x00,0x5b,0x07}};
+extern "C" const GUID __declspec(selectany) IID_Vacuum =
+    {0xc7646442,0x1115,0x11d3,{0xae,0x00,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) IID_Camera =
+    {0x9851bc41,0x1b8c,0x11d3,{0xae,0x0a,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) IID_StagePosition =
+    {0x9851bc4a,0x1b8c,0x11d3,{0xae,0x0a,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) IID_StageAxisData =
+    {0x8f1e91c2,0xb97d,0x45b8,{0x87,0xc9,0x42,0x3f,0x5e,0xb1,0x0b,0x8a}};
+extern "C" const GUID __declspec(selectany) IID_Stage =
+    {0xe7ae1e41,0x1bf8,0x11d3,{0xae,0x0b,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) IID_Vector =
+    {0x9851bc47,0x1b8c,0x11d3,{0xae,0x0a,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) IID_Illumination =
+    {0xef960690,0x1c38,0x11d3,{0xae,0x0b,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) IID_Projection =
+    {0xb39c3ae1,0x1e41,0x11d3,{0xae,0x0e,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) IID_Gun =
+    {0xe6f00870,0x3164,0x11d3,{0xb4,0xc8,0x00,0xa0,0x24,0xcb,0x92,0x21}};
+extern "C" const GUID __declspec(selectany) IID_IUserButton =
+    {0xe6f00871,0x3164,0x11d3,{0xb4,0xc8,0x00,0xa0,0x24,0xcb,0x92,0x21}};
+extern "C" const GUID __declspec(selectany) IID_UserButtons =
+    {0x50c21d10,0x317f,0x11d3,{0xb4,0xc8,0x00,0xa0,0x24,0xcb,0x92,0x21}};
+extern "C" const GUID __declspec(selectany) IID_AutoLoader =
+    {0x28df27ea,0x2058,0x41d0,{0xab,0xbd,0x16,0x7f,0xb3,0xbf,0xcd,0x8f}};
+extern "C" const GUID __declspec(selectany) IID_TemperatureControl =
+    {0x71b6e709,0xb21f,0x435f,{0x95,0x29,0x1a,0xee,0x55,0xcf,0xa0,0x29}};
+extern "C" const GUID __declspec(selectany) IID_BlankerShutter =
+    {0xf1f59bb0,0xf8a0,0x439d,{0xa3,0xbf,0x87,0xf5,0x27,0xb6,0x00,0xc4}};
+extern "C" const GUID __declspec(selectany) IID_InstrumentModeControl =
+    {0x8dc0fc71,0xff15,0x40d8,{0x81,0x74,0x09,0x22,0x18,0xd8,0xb7,0x6b}};
+extern "C" const GUID __declspec(selectany) IID_AcqImage =
+    {0xe15f4810,0x43c6,0x489a,{0x9e,0x8a,0x58,0x8b,0x09,0x49,0xe1,0x53}};
+extern "C" const GUID __declspec(selectany) IID_AcqImages =
+    {0x86365241,0x4d38,0x4642,{0xb0,0x24,0xcf,0x45,0x0c,0xeb,0x25,0x0b}};
+extern "C" const GUID __declspec(selectany) IID_CCDCameraInfo =
+    {0x024ded60,0xb124,0x4514,{0xbf,0xe2,0x02,0xc0,0xf5,0xc5,0x1d,0xb9}};
+extern "C" const GUID __declspec(selectany) IID_CCDAcqParams =
+    {0xc03db779,0x1345,0x42ab,{0x93,0x04,0x95,0xb8,0x57,0x89,0x16,0x3d}};
+extern "C" const GUID __declspec(selectany) IID_CCDCamera =
+    {0xe44e1565,0x4131,0x4937,{0xb2,0x73,0x78,0x21,0x9e,0x09,0x08,0x45}};
+extern "C" const GUID __declspec(selectany) IID_CCDCameras =
+    {0xc851d96c,0x96b2,0x4bdf,{0x8d,0xf2,0xc0,0xa0,0x1b,0x76,0xe2,0x65}};
+extern "C" const GUID __declspec(selectany) IID_STEMDetectorInfo =
+    {0x96de094b,0x9cdc,0x4796,{0x86,0x97,0xe7,0xdd,0x5d,0xc3,0xec,0x3f}};
+extern "C" const GUID __declspec(selectany) IID_STEMDetector =
+    {0xd77c0d65,0xa1dd,0x4d0a,{0xaf,0x25,0xc2,0x80,0x04,0x6a,0x57,0x19}};
+extern "C" const GUID __declspec(selectany) IID_STEMAcqParams =
+    {0xddc14710,0x6152,0x4963,{0xae,0xa4,0xc6,0x7b,0xa7,0x84,0xc6,0xb4}};
+extern "C" const GUID __declspec(selectany) IID_STEMDetectors =
+    {0x35a2675d,0xe67b,0x4834,{0x89,0x40,0x85,0xe7,0x83,0x3c,0x61,0xa6}};
+extern "C" const GUID __declspec(selectany) IID_Acquisition =
+    {0xd6bbf89c,0x22b8,0x468f,{0x80,0xa1,0x94,0x7e,0xa8,0x92,0x69,0xce}};
+extern "C" const GUID __declspec(selectany) IID_Configuration =
+    {0x39cacdaf,0xf47c,0x4bbf,{0x9f,0xfa,0xa7,0xa7,0x37,0x66,0x4c,0xed}};
+extern "C" const GUID __declspec(selectany) IID_Aperture =
+    {0xcbf4e5b8,0x378d,0x43dd,{0x9c,0x58,0xf5,0x88,0xd5,0xe3,0x44,0x4b}};
+extern "C" const GUID __declspec(selectany) IID_ApertureCollection =
+    {0xdd08f876,0x9fbb,0x4235,{0xa4,0x7e,0xff,0x26,0xad,0xa0,0x09,0x00}};
+extern "C" const GUID __declspec(selectany) IID_ApertureMechanism =
+    {0x86c13ce3,0x934e,0x47de,{0xa2,0x11,0x20,0x09,0xe1,0x0e,0x1e,0xe1}};
+extern "C" const GUID __declspec(selectany) IID_ApertureMechanismCollection =
+    {0xa5015a2d,0x0436,0x472e,{0x91,0x40,0x43,0xdc,0x80,0x5b,0x1e,0xee}};
+extern "C" const GUID __declspec(selectany) IID_InstrumentInterface =
+    {0xbc0a2b11,0x10ff,0x11d3,{0xae,0x00,0x00,0xa0,0x24,0xcb,0xa5,0x0c}};
+extern "C" const GUID __declspec(selectany) CLSID_UserButton =
+    {0x3a4ce1f0,0x3a05,0x11d3,{0xae,0x81,0x00,0x40,0x95,0x00,0x5b,0x07}};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\documents and settings\supervisor\my documents\visual studio 2010\projects\temcontroltest\temcontrolwrapper\debug\stdscript.tli"
+
+} // namespace TEMScripting
+
+#pragma pack(pop)

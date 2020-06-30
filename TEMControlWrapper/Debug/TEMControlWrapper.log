@@ -1,0 +1,31 @@
+﻿Build started 7/1/2020 12:47:14 AM.
+Project "c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlWrapper\TEMControlWrapper.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Creating "Debug\TEMControlWrapper.unsuccessfulbuild" because "AlwaysCreate" was specified.
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  All outputs are up-to-date.
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\TEMControlWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt TEMControlWrapper.cpp /clr:nostdlib 
+  TEMControlWrapper.cpp
+TEMControlWrapper.cpp(94): warning C4800: 'VARIANT_BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+  All outputs are up-to-date.
+ResourceCompile:
+  All outputs are up-to-date.
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\Debug\TEMControlWrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\TEMControlWrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\Debug\TEMControlWrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
+  Debug\AssemblyInfo.obj
+  Debug\Stdafx.obj
+  Debug\TEMControlWrapper.obj
+  "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+  TEMControlWrapper.vcxproj -> c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\Debug\TEMControlWrapper.dll
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\Debug\TEMControlWrapper.dll;#2" /manifest Debug\TEMControlWrapper.dll.intermediate.manifest
+FinalizeBuildStatus:
+  Deleting file "Debug\TEMControlWrapper.unsuccessfulbuild".
+  Touching "Debug\TEMControlWrapper.lastbuildstate".
+Done Building Project "c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlWrapper\TEMControlWrapper.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.79

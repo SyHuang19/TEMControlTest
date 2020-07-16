@@ -9,12 +9,12 @@ using namespace std;
 //using namespace System;
 using namespace System::Runtime::InteropServices;
 
-#import "C:\Titan\Scripting\StdScript.dll" named_guids
+#import "StdScript.dll" named_guids
 using namespace TEMScripting;
 
 namespace TEMControlWrapper
 {
-	public ref class Microscope
+	public ref class Microscope : System::MarshalByRefObject
 	{
 		TEMScripting::InstrumentInterfacePtr* ThisInstrumentPtr;
 

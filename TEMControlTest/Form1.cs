@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting;
 using TEMControlWrapper;
 
 namespace TEMControlTest
@@ -18,6 +19,8 @@ namespace TEMControlTest
         public Form1()
         {
             InitializeComponent();
+            RemotingConfiguration.Configure(@"..\..\Client.config", false);
+            MessageBox.Show("Server connection success");
         }
 
         private void InitConn_Click(object sender, EventArgs e)

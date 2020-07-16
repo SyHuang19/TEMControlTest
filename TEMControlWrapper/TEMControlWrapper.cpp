@@ -17,8 +17,11 @@ namespace TEMControlWrapper
 		}
 		else
 		{
-			_com_error error(hr0);
-			MessageBox(NULL, error.ErrorMessage(), L"Error", MB_OK);
+			if (hr0 != RPC_E_CHANGED_MODE)
+			{
+				_com_error error(hr0);
+				MessageBox(NULL, error.ErrorMessage(), L"Error", MB_OK);
+			}
 		}
 		
 		ThisInstrumentPtr = new TEMScripting::InstrumentInterfacePtr;

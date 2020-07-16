@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (979072e1).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.25.28612.0 (4f57da6e).
 //
-// c:\documents and settings\supervisor\my documents\visual studio 2010\projects\temcontroltest\temcontrolwrapper\debug\stdscript.tlh
+// D:\TEMControlTest\TEMControlWrapper\Debug\stdscript.tlh
 //
-// C++ source equivalent of Win32 type library C:\Titan\Scripting\StdScript.dll
-// compiler-generated file created 06/30/20 at 18:34:40 - DO NOT EDIT!
+// C++ source equivalent of Win32 type library StdScript.dll
+// compiler-generated file created 07/16/20 at 17:13:21 - DO NOT EDIT!
 
 #pragma once
 #pragma pack(push, 8)
@@ -2510,7 +2510,7 @@ extern "C" const GUID __declspec(selectany) CLSID_UserButton =
 // Wrapper method implementations
 //
 
-#include "c:\documents and settings\supervisor\my documents\visual studio 2010\projects\temcontroltest\temcontrolwrapper\debug\stdscript.tli"
+#include "D:\TEMControlTest\TEMControlWrapper\Debug\stdscript.tli"
 
 } // namespace TEMScripting
 

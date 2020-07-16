@@ -9,3 +9,14 @@ c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TE
 c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\bin\Debug\TEMControlWrapper.pdb
 c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.exe
 c:\documents and settings\supervisor\my documents\visual studio 2010\Projects\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.pdb
+D:\TEMControlTest\TEMControlTest\bin\Debug\TEMControlTest.exe
+D:\TEMControlTest\TEMControlTest\bin\Debug\TEMControlTest.pdb
+D:\TEMControlTest\TEMControlTest\bin\Debug\TEMControlWrapper.dll
+D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.csprojAssemblyReference.cache
+D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.Form1.resources
+D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.Properties.Resources.resources
+D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.csproj.GenerateResource.cache
+D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.csproj.CoreCompileInputs.cache
+D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.csproj.CopyComplete
+D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.exe
+D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.pdb

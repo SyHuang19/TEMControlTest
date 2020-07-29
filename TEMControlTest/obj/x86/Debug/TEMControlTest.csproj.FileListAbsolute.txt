@@ -20,3 +20,4 @@ D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.csproj.CoreCompile
 D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.csproj.CopyComplete
 D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.exe
 D:\TEMControlTest\TEMControlTest\obj\x86\Debug\TEMControlTest.pdb
+D:\TEMControlTest\TEMControlTest\bin\Debug\TEMControlWrapper.pdb

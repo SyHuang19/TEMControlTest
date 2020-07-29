@@ -13,11 +13,21 @@ namespace TEMControlWrapper
 	{
 		HRESULT hr0 = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1DDE);
 		if (SUCCEEDED(hr0)){
-			MessageBox(NULL, L"TEM connection initialized!", L"Status", MB_OK);
+
+			System::Console::WriteLine("TEM connection initialized!");
+
 		}
 		else
 		{
-			if (hr0 != RPC_E_CHANGED_MODE)
+			if (hr0 == RPC_E_CHANGED_MODE)
+			{
+				System::Console::WriteLine("TEM connection initialized!");
+			}
+			else if (hr0 == REGDB_E_CLASSNOTREG)
+			{
+				System::Console::WriteLine("No local TEM server found!");
+			}
+			else
 			{
 				_com_error error(hr0);
 				MessageBox(NULL, error.ErrorMessage(), L"Error", MB_OK);
@@ -26,9 +36,14 @@ namespace TEMControlWrapper
 		
 		ThisInstrumentPtr = new TEMScripting::InstrumentInterfacePtr;
 		HRESULT hr = ThisInstrumentPtr->CreateInstance(_T("TEMScripting.Instrument.1"));
-		if (FAILED(hr)) {
-			_com_error error(hr);
-			MessageBox(NULL, error.ErrorMessage(), L"Error", MB_OK);
+		if (FAILED(hr))
+		{
+			if (hr != REGDB_E_CLASSNOTREG)
+			{
+				_com_error error(hr);
+				MessageBox(NULL, error.ErrorMessage(), L"Error", MB_OK);
+			}
+			
 		}
 	}
 

@@ -103,6 +103,24 @@ namespace TEMControlWrapper
 		ThisIllumination->StemMagnification = nMag;
 	}
 
+	double TEMControlWrapper::Microscope::GetDefocus()
+	{
+		TEMScripting::InstrumentInterfacePtr ThisInstrument = *ThisInstrumentPtr;
+		TEMScripting::ProjectionPtr ThisProjection;
+		ThisProjection = ThisInstrument->GetProjection();
+		double ThisDef = ThisProjection->Defocus;
+		return ThisDef;
+	}
+
+	void TEMControlWrapper::Microscope::SetDefocus(double df)
+	{
+		TEMScripting::InstrumentInterfacePtr ThisInstrument = *ThisInstrumentPtr;
+		TEMScripting::ProjectionPtr ThisProjection;
+		ThisProjection = ThisInstrument->GetProjection();
+		ThisProjection->Defocus = df;
+
+	}
+
 	// Switch the status of beam blank
 	void TEMControlWrapper::Microscope::SwitchBeamBlank(bool BlankAction)
 	{

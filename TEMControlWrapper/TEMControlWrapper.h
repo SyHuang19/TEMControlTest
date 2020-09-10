@@ -29,6 +29,10 @@ namespace TEMControlWrapper
 		
 		double GetMag();
 
+		double GetDefocus();
+
+		void SetDefocus(double df);
+
 		void SetMag(double nMag);
 
 		void SwitchBeamBlank(bool BlankAction);

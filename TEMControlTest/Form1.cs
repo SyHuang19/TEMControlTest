@@ -89,5 +89,19 @@ namespace TEMControlTest
             TEM.SaveStatus(sfile);
         }
 
+        private void GetDef_Click(object sender, EventArgs e)
+        {
+            double df;
+            df = TEM.GetDefocus();
+            df *= 1E9;
+            defocus.Text = df.ToString();
+        }
+
+        private void SetDef_Click(object sender, EventArgs e)
+        {
+            double df;
+            df = Convert.ToDouble(defocus.Text) * 1E-9;
+            TEM.SetDefocus(df);
+        }
     }
 }

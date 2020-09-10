@@ -1,4 +1,8 @@
 ﻿  TEMControlWrapper.cpp
+D:\TEMControlTest\TEMControlWrapper\TEMControlWrapper.cpp(3,1): warning C4005: '__CLR_VER': macro redefinition
+D:\TEMControlTest\TEMControlWrapper\Stdafx.cpp : message : see previous definition of '__CLR_VER'
+D:\TEMControlTest\TEMControlWrapper\TEMControlWrapper.cpp(3,1): warning C4651: '/D__CLR_VER=40804180' specified for precompiled header but not for current compile
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   TEMControlWrapper.vcxproj -> D:\TEMControlTest\Debug\TEMControlWrapper.dll
